@@ -1,0 +1,1783 @@
+//W.a.p to display Hello java program
+//Name:Puyed Krishna
+
+ class Add {
+
+	public static void main(String[] args)
+	{
+		System.out.println("Hello Java");
+
+	}
+
+}
+
+O/p
+Hello Java
+
+
+===================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//2.W.a.p to calculate two number addition
+// Name : Puyed Krishna
+
+ class Addition {
+public static void main(String[] args)
+{
+	int a=10,b=20;
+	int c=a+b;
+	System.out.println("Addition="+c);
+}
+}
+
+O/P
+Addition=30
+
+
+
+
+
+==========================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+//3.write a progrm to check where the given number is Armstrong or not
+//Name:Puyed Krishna
+import java.util.*;
+ class Armstrong {
+public static void main(String[] args)
+{
+	int num,n,temp,total=0;
+	Scanner x=new Scanner(System.in);
+	System.out.println("please enter a no:");
+	num=x.nextInt();
+	n=num;
+	while(n!=0)
+	{
+		temp=n%10;
+		total=total+temp*temp*temp;
+		n=n/10;
+	}
+	if(total==num)
+	{
+		System.out.println("Is Armstrong No:"+num);
+	}
+	else
+	{
+		System.out.println("Is Not Armstrong No:"+num);
+	}
+}
+}
+
+O/p
+please enter a no:
+153
+Is Armstrong No:153
+
+
+
+
+
+
+
+=====================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//4.W.a.p to print array element
+// Puyed Krishna
+import java.util.*;
+class Array1 {
+public static void main(String[] args)
+{
+	int [] x= {10,20,30,40,50};
+	for(int i=0;i<5;i++)
+	{
+	System.out.println(x[i]);
+	}
+}
+}
+
+O/P
+10
+20
+30
+40
+50
+
+
+
+
+======================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5.
+// Puyed Krishna
+import java.util.*;
+ class Array2 {
+	 public static void main(String[] args)
+	 {
+		 int k,sum=0;
+		 int [] i= {10,20,30,40,50};
+		 Scanner x=new Scanner(System.in);
+		 System.out.println("Array element:");
+		 
+		 for(k=0;k<5;k++)
+		 {
+			 sum=sum+i[k];
+		 }
+		 System.out.println("Sum of array="+sum);
+	 }
+
+}
+
+O/P
+Array element:
+Sum of array=150
+
+
+
+====================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6.
+// Puyed Krishna
+import java.util.*;
+class Web
+{
+	private int accountno;
+	private String name;
+	private int pin;
+	private int amount;
+	private int balance;
+	private int current;
+	Scanner x=new Scanner(System.in);
+	void setdata(String a)
+	{
+		System.out.println("Please enter Customer details");
+		accountno=x.nextInt();
+		name=a;
+		System.out.println("please enter a pin no");
+		pin=x.nextInt();
+		amount=50000;
+		System.out.println("Please enter a balance");
+		balance=x.nextInt();
+		
+	}
+	void calculate()
+	{
+		current=amount-balance;
+		if(balance<=amount)
+		{
+			if(pin==159)
+			{
+				System.out.println("Account No="+accountno);
+				System.out.println("Name="+name);
+				System.out.println("Amount="+amount);
+				System.out.println("Balance="+balance);
+				System.out.println("Current Balance="+current);
+				System.out.println("Transscation Successful");
+			}
+		
+		else
+		{
+			System.out.println("Correct pin");
+		}
+		}
+	}
+}
+
+public class Atm {
+public static void main(String[] args)
+{
+	Web e1=new Web();
+	e1.setdata("Krishna");
+	e1.calculate();
+	
+}
+}
+
+O/P
+Please enter Customer details
+6574
+please enter a pin no
+159
+Please enter a balance
+30000
+Account No=6574
+Name=Krishna
+Amount=50000
+Balance=30000
+Current Balance=20000
+Transscation Successful
+
+
+
+
+
+
+===================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+7.
+//Name:Puyed Krishna
+import java.util.*;
+public class Choose {
+public static void main(String[] args)
+{
+	int i,k;
+	Scanner x=new Scanner(System.in);
+	System.out.println("Please enter a no:");
+	i=x.nextInt();
+for(k=1;k<=i;k++)	
+{
+	if(k%3==0 & k%7==0) {
+		
+	
+	System.out.println(+k);
+	}
+}
+}
+}
+
+O/P
+Please enter a no:
+100
+21
+42
+63
+84
+
+
+
+
+==================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8.
+//Name:Puyed Krishna
+import java.util.*;
+import java.io.*;
+class Circle
+ {
+public static void main(String[] args)
+{
+float r,p;
+Scanner x=new Scanner(System.in);
+System.out.println("Please enter a Radius:");
+r=x.nextFloat();
+p=2.0f*3.14f*r;
+System.out.println("Area of circle="+p);
+}
+}
+O/P
+Please enter a Radius:
+5
+Area of circle=31.400002
+
+
+
+===================================================================================
+
+
+
+
+9.
+//Name:Puyed Krishna
+import java.util.*;
+class A
+{
+	int a,b,c;
+	Scanner x=new Scanner(System.in);
+	A()
+	{
+		System.out.println("Please enter a two no:");
+		a=x.nextInt();
+		b=x.nextInt();
+		c=a+b;
+		System.out.println("Addition="+c);
+	}
+}
+
+public class Con1 {
+public static void main(String[] args)
+{
+	A a1=new A();
+}
+}
+O/P
+Please enter a two no:
+20 30
+Addition=50
+
+
+
+
+
+=================================================================================
+
+
+
+
+
+10.
+//Name:Puyed Krishna
+import java.util.*;
+class Cubeno {
+public static void main(String[] args)
+{
+	for(int i=1;i<=10;i++)
+	{
+		System.out.println(+i+"="+i*i*i);
+	}
+}
+}
+
+O/P
+1=1
+2=8
+3=27
+4=64
+5=125
+6=216
+7=343
+8=512
+9=729
+10=1000
+
+
+
+
+==================================================================================
+
+
+
+
+
+
+
+
+11.
+//Name:Puyed Krishna
+import java.util.*;
+ class Difference3 {
+public static void main(String[] args)
+{
+	int a=2;
+	int d=3;
+	for(int x=1;x<=5;x++)
+	{
+
+		System.out.println(a);
+		a=a+d;
+	}
+}
+}
+
+O/P
+2
+5
+8
+11
+14
+
+
+
+
+================================================================================
+
+
+
+
+
+
+
+
+12.
+//Name:Puyed Krishna
+import java.util.*;
+class Fibo {
+public static void main(String[] args)
+{
+	int a=0;
+	int b=1;
+	int c=a+b;
+	for(int i=1;i<=5;i++)
+	{
+		System.out.println(c);
+		c=a+b;
+		a=b;
+		b=c;
+	}
+}
+}
+
+O/P
+1
+1
+2
+3
+5
+
+
+
+
+==================================================================================
+
+
+
+
+
+
+
+13.
+//Name:Puyed Krishna
+import java.util.*;
+class Fina {
+public static void main(String[] args)
+{
+	final int a=10;
+    
+	System.out.println("Value of final="+a);
+	
+}
+}
+
+O/P
+Value of final=10
+
+
+
+
+
+================================================================================
+
+
+
+
+
+
+
+
+
+
+14.
+//Name:Puyed Krishna
+import java.util.*;
+class Geomatric {
+public static void main(String[] args)
+{
+	int r=2;
+	int a=5;
+	for(int x=1;x<=10;x++)
+	{
+		System.out.println(a);
+		a=a*r;
+	}
+}
+}
+
+O/P
+5
+10
+20
+40
+80
+160
+320
+640
+1280
+2560
+
+
+
+==============================================================================
+
+
+
+
+
+
+15.
+//Name:Puyed Krishna
+import java.util.*;
+class Hello {
+
+	public static void main(String[] args) {
+		int a,b,c;
+		Scanner x=new Scanner(System.in);
+		System.out.println("Please enter 1 no:");
+		a=x.nextInt();
+		System.out.println("Please enter a 2 no:");
+		b=x.nextInt();
+		c=a+b;
+		System.out.println("Add="+c);
+
+	}
+
+}
+
+O/P
+Please enter 1 no:
+10
+Please enter a 2 no:
+20
+Add=30
+
+
+===============================================================================
+
+
+
+
+
+
+
+16.
+//Name:Puyed Krishna
+import java.util.*;
+import java.lang.*;
+class Leap {
+public static void main(String[] args)
+{
+	int year;
+	Scanner x=new Scanner(System.in);
+	System.out.println("Enter a Year:");
+	year=x.nextInt();
+	if(year%400==0)
+	{
+		System.out.println("The Leap year:");
+	}
+	else if(year%100==0)
+	{
+		System.out.println("Is not Leap year");
+	}
+	else if(year%4==0)
+	{
+		System.out.println("The Leap Year:");
+	}
+	else
+	{
+		System.out.println("Not leap Year");
+	}
+}
+}
+O/P
+Enter a Year:
+2008
+The Leap Year:
+
+
+
+
+
+===================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+17.
+//Name:Puyed Krishna
+import java.util.*;
+ class Multi 
+ {
+public static void main(String[] args)
+{
+	for(int x=1;x<=10;x++)
+	{
+		for(int y=1;y<=10;y++)
+		{
+			System.out.printf("%4d",(x*y));
+			
+		}
+		System.out.println();
+	}
+}
+
+}
+O/P
+   1   2   3   4   5   6   7   8   9  10
+   2   4   6   8  10  12  14  16  18  20
+   3   6   9  12  15  18  21  24  27  30
+   4   8  12  16  20  24  28  32  36  40
+   5  10  15  20  25  30  35  40  45  50
+   6  12  18  24  30  36  42  48  54  60
+   7  14  21  28  35  42  49  56  63  70
+   8  16  24  32  40  48  56  64  72  80
+   9  18  27  36  45  54  63  72  81  90
+  10  20  30  40  50  60  70  80  90 100
+
+
+
+=================================================================================
+
+
+
+
+
+
+
+
+
+
+
+18.
+//Name:Puyed Krishna
+import java.util.*;
+ class Name {
+public static void main(String[] args)
+{
+	Scanner x=new Scanner(System.in);
+	String[] na=new String[5];
+	System.out.println("Please enter 5 student full name");
+	for(int i=1;i<=5;i++)
+	{
+	na[i]=x.nextLine();
+	}
+	for(int y=1;y<=5;y++)
+	{
+	System.out.println(na[y]);
+	}
+}
+}
+
+O/P
+Please enter 5 student full name
+Krishna Puyed
+Sonu Puyed
+Chakradhar Puyed
+Avi Puyed 
+Omkar Kawale
+
+
+
+
+
+===================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+19.
+//Name:Puyed Krishna
+import java.util.*;
+class Demo
+{
+	protected int Rollno;
+	protected String name;
+	protected float per;
+	void setdata()
+	{
+		System.out.println("WElcome to College");
+	}
+	void setdata(int x,String na)
+	{
+		Rollno=x;
+		name=na;
+		
+	}
+	void setdata(float f)
+	{
+		per=f;
+	}
+	void getdata()
+	{
+		System.out.println("Rollno="+Rollno);
+		System.out.println("Name="+name);
+		System.out.println("Percentage="+per);
+	}
+	
+}
+
+
+public class Overloaded {
+public static void main(String[] args)
+{
+	Demo d1=new Demo();
+	d1.setdata();
+	d1.setdata(10,"krishna");
+	d1.setdata(78.46f);
+	d1.getdata();
+	
+}
+}
+
+O/P
+WElcome to College
+Rollno=10
+Name=krishna
+Percentage=78.46
+
+===================================================================================
+
+
+
+//20.write a progrm to check whether the given number is Palidrom or not
+//Name:Puyed Krishna
+import java.util.*;
+public class Palidrom {
+public static void main(String[] args)
+{
+	int d,n,r;
+	Scanner x=new Scanner(System.in);
+	System.out.println("Please enter a No:");
+	n=x.nextInt();
+	r=0;
+	int temp=n;
+	while(n>0)
+	{
+		d=n%10;
+		r=r*10+d;
+		n=n/10;
+	}
+	if(r==temp)
+	{
+		System.out.println("Number is Palidrom");
+	}
+	else
+	{
+		System.out.println("Number is Not Palidrom");
+	}
+}
+}
+
+O/P
+Please enter a No:
+121
+Number is Palidrom
+
+
+
+
+==================================================================================
+
+
+
+
+
+
+21.
+//Name:Puyed Krishna
+import java.util.*;
+class Pattern1 {
+public static void main(String[] args)
+{
+	for(int i=1;i<=5;i++)
+	{
+		for(int j=1;j<=5;j++)
+		{
+		System.out.print(i);
+	}
+		System.out.println();
+	}
+}
+}
+
+O/P
+11111
+22222
+33333
+44444
+55555
+
+
+
+
+==================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+22.
+
+//Name:Puyed Krishna
+import java.util.*;
+class Primeno {
+public static void main(String[] args)
+{
+	int i,n;
+	int c=0;
+	Scanner x=new Scanner(System.in);
+	System.out.println("Enter a no");
+	n=x.nextInt();
+	for(i=1;i<=n;i++)
+	{
+		if(n%i==0)
+		{
+			c++;
+		}
+	}
+	if(c==2)
+	{
+		System.out.println("The prime no");
+	}
+	else
+	{
+		System.out.println("Not prime no:");
+	}
+}
+}
+
+O/P
+Enter a no
+7
+The prime no
+
+
+
+=====================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+23.
+//Name:Puyed Krishna
+import java.util.*;
+class Rect {
+private int area,l,b;
+Scanner x=new Scanner(System.in);
+public void setdata()
+{
+	System.out.println("please enter a length:");
+	l=x.nextInt();
+	System.out.println("please enter a breadth:");
+	b=x.nextInt();
+}
+public void getdata()
+{
+	area=l*b;
+	System.out.println("Area="+area);
+}
+
+
+	public static void main(String[] args)
+	{
+		Rect r=new Rect();
+		r.setdata();
+		r.getdata();
+	}
+}
+
+O/P
+please enter a length:
+10
+please enter a breadth:
+5
+Area=50
+
+
+
+====================================================================================
+
+
+
+
+
+
+24.
+//Name:Puyed Krishna
+import java.util.*;
+class Rect1
+{
+  private int a,l,b;
+  public void setdata(int a,int c)
+  {
+	  l=a;
+	  b=c;
+  }
+  public void getdata()
+  {
+	  a=l*b;
+	  System.out.println("Area of Rectangle="+a);
+  }
+  public static void main(String[] args)
+  {
+	  Rect1 r1=new Rect1();
+	  r1.setdata(10,30);
+	  r1.getdata();
+  }
+}
+
+O/P
+Area of Rectangle=300
+
+
+
+
+=====================================================================================
+
+
+
+
+
+
+
+
+
+
+
+25.
+//Name:Puyed Krishna
+import java.util.*;
+class Marks
+{
+	int m1,m2,m3,m4,m5,total;
+	float per;
+	Scanner x=new Scanner(System.in);
+	void setdata()
+	{
+		System.out.println("Please enter a 5 Subject Marks:");
+		m1=x.nextInt();
+		m2=x.nextInt();
+		m3=x.nextInt();
+		m4=x.nextInt();
+		m5=x.nextInt();
+	}
+	void calculate()
+	{
+		total=m1+m2+m3+m4+m5;
+		per=total/5;
+	}
+	void display()
+	{
+		if(m1>=35&&m2>=35&&m3>=35&&m4>=35&&m5>=35)
+		{
+		 if(per>=80)
+		{
+			System.out.println("Total Marks="+total);
+			System.out.println("Percentage="+per);
+			System.out.println("Gread=A");
+			System.out.println("Result=Pass");
+		}
+		else if(per>=60 ||per<=79)
+		{
+			System.out.println("Total Marks="+total);
+			System.out.println("Percentage="+per);
+			System.out.println("Gread=B");
+			System.out.println("Result=Pass");
+		}
+		else if(per>=35 || per<=59)
+		{
+			System.out.println("Total Marks="+total);
+			System.out.println("Percentage="+per);
+			System.out.println("Gread=C");
+			System.out.println("Result=Pass");
+		}
+		
+		}
+		
+		else
+		{
+			System.out.println("Result=Fail");
+		}
+		
+		
+		}
+	
+}
+
+
+public class Result {
+public static void main(String[] args)
+{
+	Marks m1=new Marks();
+	m1.setdata();
+	m1.calculate();
+	m1.display();
+}
+}
+
+O/P
+
+Please enter a 5 Subject Marks:
+90
+88
+87
+78
+79
+Total Marks=422
+Percentage=84.0
+Gread=A
+Result=Pass
+
+
+
+===================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//26.w.a.p to calculate two number square
+//Name:Puyed Krishna
+import java.util.*;
+class Square {
+
+	public static void main(String[] args) {
+	int n1,n2;
+	Scanner x=new Scanner(System.in);
+	System.out.println("Please enter a 1 No:");
+	n1=x.nextInt();
+	System.out.println("Please enter a 2 No:");
+	n2=x.nextInt();
+	int squ1=n1*n1;
+	int squ2=n2*n2;
+	System.out.println("Square1="+squ1);
+	System.out.println("Square2="+squ2);
+
+	}
+
+}
+
+O/P
+
+Please enter a 1 No:
+5
+Please enter a 2 No:
+7
+Square1=25
+Square2=49
+
+
+
+===================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+27.
+//Name:Puyed Krishna
+import java.util.*;
+class Squareno
+{
+	public static void main(String[] args)
+	{
+		for(int i=1;i<=15;i++)
+		{
+			System.out.println(+i+"="+i*i);
+		}
+	}
+}
+
+O/P
+1=1
+2=4
+3=9
+4=16
+5=25
+6=36
+7=49
+8=64
+9=81
+10=100
+11=121
+12=144
+13=169
+14=196
+15=225
+
+
+
+======================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+28.
+//Name:Puyed Krishna
+import java.util.*;
+ class Star {
+public static void main(String[] args)
+{
+	for(int x=1;x<=10;x++)
+	{
+		for(int i=1;i<=x;i++)
+		{
+			System.out.print("*");
+		}
+		System.out.println();
+	}
+}
+}
+
+O/P
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+
+
+
+================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+29.
+//Name:Puyed Krishna
+import java.util.*;
+class Stu2
+ {
+int rollno;
+String name;
+void setdata()
+{
+	Scanner x=new Scanner(System.in);
+	System.out.println("Enter rollno and name");
+	rollno=x.nextInt();
+	name=x.nextLine();
+}
+void getdata()
+{
+	System.out.println("Rollno="+rollno);
+	System.out.println("Name="+name);
+}
+public static void main(String[] args)
+{
+	Stu2 s1=new Stu2();
+	int x;
+	for(x=1;x<=5;x++)
+	{
+	s1.setdata();
+	s1.getdata();
+	}
+}
+}
+
+O/P
+Enter rollno and name
+10 krishna
+Rollno=10
+Name= krishna
+Enter rollno and name
+20 Rahul
+Rollno=20
+Name= Rahul
+Enter rollno and name
+
+
+
+================================================================================
+
+
+
+
+
+
+
+
+
+30.
+//Name:Puyed Krishna
+import java.util.*;
+ class Sumeven {
+public static void main(String[] args)
+{
+	int num,x,even=0,odd=0;
+	Scanner scan=new Scanner(System.in);
+	System.out.println("Enter a no:");
+	num=scan.nextInt();
+	for(x=1;x<=num;x++)
+	{
+		if(x%2==0)
+		{
+			even=even+x;
+		}
+		else
+		{
+			odd=odd+x;
+		}
+	}
+	System.out.println("The sum of even no:"+num+"="+even);
+	System.out.println("The sum of odd no:"+num+"="+odd);
+}
+}
+
+O/P
+
+Enter a no:
+20
+The sum of even no:20=110
+The sum of odd no:20=100
+
+
+==============================================================================
+
+
+31.
+//Name:Puyed Krishna
+import java.util.*;
+class Swit 
+{
+public static void main(String[] args)
+{
+	int day;
+	Scanner x=new Scanner(System.in);
+	System.out.println("Please enter a Day:");
+	day=x.nextInt();
+	switch(day)
+	{
+	case 1:
+		System.out.println("Monday");
+		break;
+	case 2:
+		System.out.println("Tuesday");
+		break;
+	case 3:
+		System.out.println("Wen");
+		break;
+	case 4:
+		System.out.println("Thus");
+		break;
+	case 5:
+		System.out.println("Fri");
+		break;
+	}
+}
+}
+
+
+O/P
+Please enter a Day:
+1
+Monday
+
+
+=================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+32.
+//Name:Puyed Krishna
+import java.util.*;
+class Tour 
+{
+public static void main(String[] args)
+{
+	int att,fees;
+	Scanner x=new Scanner(System.in);
+	System.out.println("Please enter attendance and fees");
+	att=x.nextInt();
+	fees=x.nextInt();
+	if(att>=75 && fees==17500)
+	{
+		System.out.println("Welcome to college tour");
+	}
+	else
+	{
+		System.out.println("You are not college tour");
+	}
+}
+}
+
+O/P
+
+Please enter attendance and fees
+80
+17500
+Welcome to college tour
+
+
+==================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+33.
+//Name:Puyed Krishna
+import java.util.*;
+class Elseif 
+{
+public static void main(String[] args)
+{
+	int x;
+	Scanner scan=new Scanner(System.in);
+	System.out.println("Enter a No:");
+	x=scan.nextInt();
+	if(x<=10)
+	{
+		System.out.println("The number is between 0 to 10");
+	}
+	else if(x>10 && x<=20)
+	{
+		System.out.println("The number is between 11 to 20");
+	}
+	else if(x>20 && x<=30)
+	{
+		System.out.println("The number is between 21 to 30");
+	}
+	else
+	{
+		System.out.println("The number is greater than 30");
+	}
+}
+}
+
+O/P
+Enter a No:
+22
+The number is between 21 to 30
+
+
+
+=================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+34.
+
+//Name:Puyed Krishna
+import java.util.*;
+class ElectricityBill 
+{
+public static void main(String[] args)
+{
+	int unit;
+	float amount,unitrate;
+	Scanner x=new Scanner(System.in);
+	System.out.println("Please enter a unit");
+	unit=x.nextInt();
+	if(unit<=100)
+	{
+		 unitrate=8;
+			amount=unitrate*unit;
+			System.out.println("Billamount="+amount);
+	}
+	else if(unit>100 && unit<=200)
+	{
+		 unitrate=10;
+			amount=unitrate*unit;
+			System.out.println("Billamount="+amount);
+	}
+	else if(unit>200)
+	{
+		unitrate=12;
+		amount=unitrate*unit;
+		System.out.println("Billamount="+amount);
+	}
+
+}
+}
+
+O/P
+Please enter a unit
+250
+Billamount=3000.0
+
+
+===============================================================================
+
+
+
+
+
+
+35.
+//Name:Puyed Krishna
+class Discount 
+{
+public static void main(String[] args)
+{
+	int dis,a,m,s;
+	m=1000;
+	dis=40;
+	System.out.println("Price="+m);
+	System.out.println("Discount="+dis);
+	s=100-dis;
+	a=(s*m)/100;
+	System.out.println("Amount after discount="+a);
+}
+}
+
+O/P
+Price=1000
+Discount=40
+Amount after discount=600
+
+
+
+
+==================================================================================
+
+
+
+
+
+
+
+
+36.
+//Name:Puyed Krishna
+import java.util.*;
+class Cgpa 
+{
+public static void main(String[] args)
+{
+	int n=5;
+	int m[]=new int[n];
+	int g[]=new int[n];
+	double cgpa,sum=0;
+	m[0]=95;
+	m[1]=85;
+	m[2]=75;
+	m[3]=80;
+	m[4]=95;
+	for(int i=0;i<n;i++)
+	{
+		g[i]=(m[i]/10);
+		
+	}
+	for(int i=0;i<n;i++)
+	{
+		sum+=g[i];
+	}
+	cgpa=sum/n;
+	System.out.println("CGPA="+cgpa);
+	System.out.println("Percentage from cgpa="+cgpa*9.5);
+	
+}
+}
+
+O/P
+CGPA=8.2
+Percentage from cgpa=77.89
+
+
+
+=================================================================================
+
+
+37.
+//Name:Puyed Krishna
+import java.util.*;
+class Allprime 
+{
+public static void main(String[] args)
+{
+	int n,cn,i,j,count;
+	Scanner x=new Scanner(System.in);
+     System.out.println("Enter a number:");
+	n=x.nextInt();
+	System.out.println("List of prinime number");
+	for(i=1;i<=n;i++)
+	{
+		cn=i;
+		count=0;
+		for(j=1;j<=cn;j++)
+		{
+			if(cn%j==0)
+			{
+				count++;
+			}
+		}
+		if(count==2)
+		{
+			System.out.println(+cn);
+			}
+	}
+	
+}
+}
+O/P
+Enter a number:
+50
+List of prinime number
+2
+3
+5
+7
+11
+13
+17
+19
+23
+29
+31
+37
+41
+43
+47
+===================================================================================

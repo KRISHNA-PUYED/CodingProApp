@@ -1,0 +1,1176 @@
+*****************Console Programs*************************
+1.Print 1 to 100
+
+namespace example
+{
+    class ArrayIn
+    {
+        public static void Main(string[] args)
+        {
+           
+            for (int i = 0; i <=99; i++)
+            {
+               
+                if (i%10==0)
+                {
+                   
+                    Console.WriteLine(i);
+                    i++;
+                    Console.WriteLine(i);
+
+                }
+                
+            }
+}
+    }
+}
+===================================================================================
+2.Array 1
+
+namespace exampleArr
+{
+    class Array1
+    {
+        public static void Main(string[] args)
+        {
+            int[] arr = { 10, 20, 30, 40, 50 };
+            for(int i=0;i<5;i++)
+            {
+                Console.WriteLine(arr[i]);
+            }
+        }
+    }
+}
+
+=================================================================================
+3.Array 2
+
+namespace exampleArr2
+{
+    class Array2
+    {
+        public static void Main(string[] args)
+        {
+            int[] arr = new int[5];
+            arr[0] = 100;
+            arr[1] = 200;
+            arr[2] = 300;
+            arr[3] = 400;
+            arr[4] = 500;
+            for(int i=0;i<5;i++)
+            {
+                Console.WriteLine(arr[i]);
+            }
+   
+        }
+    }
+}
+
+=====================================================================================
+4. CallByRef
+
+namespace CallByRef
+{
+    class Call
+    {
+        public void Display(ref int num)
+        {
+            Console.WriteLine("Before call value" + num);
+            num = num + 10;
+            Console.WriteLine("User call value" + num);
+
+        }
+        public static void Main(string[] args)
+        {
+            Call c1 = new Call();
+            int num = 15;
+            c1.Display(ref num);
+            Console.WriteLine("After call value" + num);
+        }
+    }
+}
+
+==================================================================================
+5.Call ByRef 2
+
+namespace Example
+{
+    class Call
+    {
+        public void show(ref int x)
+        {
+            x = x + 20;
+            Console.WriteLine("Modify Value=" + x);
+        }
+
+        public static void Main(string[] args)
+        {
+            Call c1 = new Call();
+            int x = 30;
+            c1.show(ref x);
+
+            Console.WriteLine("After call Value=" + x);
+
+            Console.ReadLine();
+        }
+    }
+}
+
+=========================================================================================
+6.CallByValue
+namespace Example
+{
+    class Call
+    {
+        public void show(int x)
+        {
+            x = x + 20;
+            Console.WriteLine("Modify Value=" + x);
+        }
+
+        public static void Main(string[]args)
+        {
+            Call c1 = new Call();
+            int x=30;
+            c1.show(x);
+
+            Console.WriteLine("After call Value=" + x);
+
+            Console.ReadLine();
+        }
+    }
+}
+==============================================================================
+7. CallBYValue2
+namespace CallByValue
+{
+    //class Call
+    {
+        public void Display(int num)
+        {
+            Console.WriteLine("Before call value" + num);
+            num = num + 10;
+            Console.WriteLine("User call value" + num);
+          
+        }
+        public static void Main(string[] args)
+        {
+            Call c1 = new Call();
+            int num=15;
+            c1.Display(num);
+            Console.WriteLine("After call value" + num);
+        }
+    }
+}
+=====================================================================================
+8.Compare String
+
+namespace Example
+{
+    class StringCompare
+    {
+        public static void Main(string[] args)
+        {
+            string s1 = "Welcome";
+            string s2 = "Welcome";
+
+            Console.WriteLine("String Compare=" + string.Compare(s1, s2));
+
+            Console.ReadLine();
+        }
+    }
+}
+====================================================================================
+9.Divide Number 3&7
+
+namespace example
+{
+    class demo
+    {
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("Enter a no:");
+            int num = Convert.ToInt32(Console.ReadLine());
+            for(int i=0;i<=num;i++)
+            {
+                if(i%3==0 & i%7==0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+        }
+    }
+}
+
+======================================================================================
+10. Exception
+
+namespace Example
+{
+    class ExceptionHand
+    {
+        public static void Main(string[] args)
+
+        {
+            int a, b, div;
+            Console.WriteLine("Enter a no a:");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter a no b:");
+            b = Convert.ToInt32(Console.ReadLine());
+
+            try
+            {
+                div= a/ b;
+                Console.WriteLine("Division=" + div);
+            }
+            catch(Exception e1)
+            {
+                Console.WriteLine("Number is not divided by 0"+e1);
+            }
+            finally
+            {
+                Console.WriteLine("Welcome");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+====================================================================================
+11.Function Program
+
+namespace example
+{
+    class demo
+    {
+        public void show()
+        {
+            Console.WriteLine("Hello, World!");
+        }
+        public static void Main(string[] arg)
+        {
+            demo d = new demo();
+            d.show();
+        }
+    }
+}
+===========================================================================================
+12. Function Parameter
+
+namespace power
+{
+    public class demo
+    {
+        public void show(int x)
+        {
+            int sqr = x * x;
+            Console.WriteLine("square",+sqr);
+        }
+        public static void Main(string[] args)
+        {
+            demo de = new demo();
+            de.show(5);
+        }
+    }
+}
+
+========================================================================================
+13.Function No Return
+namespace funexample
+{
+    class funret
+    {
+        public int show(int num)
+        {
+            int sqr = num * num;
+            return sqr;
+        }
+        public static void Main(string[] args)
+        {
+            funret f1 = new funret();
+            int s;
+            s=f1.show(10);
+            Console.WriteLine(s);
+
+        }
+    }
+}
+
+=======================================================================================
+14.Function No Argument
+namespace rettype
+{
+    class Funret
+    {
+        public int show()
+        {
+            int n = 3;
+            int sqr;
+            sqr = n * n;
+            return sqr;
+        }
+        public static void Main(string[] args)
+        {
+            Funret ft = new Funret();
+            int f;
+            f = ft.show();
+            Console.WriteLine("Square="+f);
+        }
+    }
+}
+=========================================================================================
+15.Indexer Program
+namespace Example
+{
+    class Indexer
+    {
+        private int[] arr = new int[3];
+
+        public int this[int i]
+        {
+            set
+            {
+                arr[i] = value;
+            }
+            get
+            {
+                return arr[i];
+            }
+        }
+    }
+
+    class demo
+    {
+        public static void Main(string[] args)
+        {
+            Indexer i1 = new Indexer();
+            i1[0] = 10;
+            i1[1] = 20;
+            i1[2] = 30;
+            for(int i=0;i<3;i++)
+            {
+                Console.WriteLine(i1[i]);
+            }
+            Console.ReadLine();
+        }
+    }
+}
+=====================================================================================
+16.Interface Program
+
+namespace Example
+{
+    interface Demo
+    {
+        public void show();
+
+    }
+    class Inter : Demo
+    {
+        public void show()
+        {
+            Console.WriteLine("This is interface Method");
+        }
+
+        public static void Main(string[]args)
+        {
+            Inter i1 = new Inter();
+            i1.show();
+            Console.ReadLine();
+        }
+    }
+}
+====================================================================================
+17.MultiTask Program
+namespace Example
+{
+    public delegate void Arith(int x, int y);
+
+    class Dele
+    {
+        public void add(int x,int y)
+        {
+            int Addition = x + y;
+            Console.WriteLine("Addition="+Addition);
+
+        }
+        public void sub(int x, int y)
+        {
+            int Sub = x - y;
+            Console.WriteLine("Subtraction=" + Sub);
+
+        }
+        public void Mul(int x, int y)
+        {
+            int Multi = x * y;
+            Console.WriteLine("Multiplication=" + Multi);
+
+        }
+    }
+
+    class Demo
+    {
+        public static void Main(string[]args)
+        {
+            Dele d1 = new Dele();
+            Arith a1 = new Arith(d1.add);
+            a1 +=d1.sub;
+            a1 += d1.Mul;
+            a1(10,20);
+
+            Console.ReadLine();
+        }
+    }
+}
+====================================================================================
+18.NameSpace Program
+using Student1;
+
+namespace Student1
+{
+    class Demo
+    {
+        public void show()
+        {
+            Console.WriteLine("This is show method");
+        }
+    }
+}
+namespace Example
+{
+    class Call
+{
+    public static void Main(String[] args)
+    {
+        Demo d1 = new Demo();
+        d1.show();
+    }
+}
+}
+====================================================================================
+19.Outside Function Call
+namespace Example
+{
+    class Call
+    {
+        public void show(out int x)
+        {
+             x = 40;
+            x = x + 60;
+           
+        }
+
+        public static void Main(string[] args)
+        {
+            Call c1 = new Call();
+            int x;
+            c1.show(out x);
+
+            Console.WriteLine("After call Value=" + x);
+
+            Console.ReadLine();
+        }
+    }
+}
+=====================================================================================
+20.Properties Program
+namespace Example
+{
+    class Demo
+    {
+        private int rollno;
+
+        public int Rollno
+        {
+            set
+            {
+                rollno = value;
+
+            }
+            get
+            {
+                return rollno;
+
+            }
+        }
+    }
+
+    class Acc
+    {
+        public static void Main(string[] args)
+        {
+            Demo d1 = new Demo();
+            d1.Rollno = 100;
+            Console.WriteLine("Rollno="+d1.Rollno);
+
+            Console.ReadLine();
+        }
+    }
+}
+========================================================================================
+21.Reverse Number
+
+namespace Example
+{
+    class Demo
+    {
+        public static void Main(string[] args)
+        {
+            int num, rem, rever=0;
+            Console.WriteLine("Enter a no:");
+            num = int.Parse(Console.ReadLine());
+            while(num>0)
+            {
+                rem = num % 10;
+                rever = rever * 10 + rem;
+                num = num / 10;
+
+            }
+            Console.WriteLine("Reverse Number=" + rever);
+
+            Console.ReadLine();
+        }
+    }
+}
+
+==========================================================================================
+22. All String Methods
+namespace example
+{
+    class StringClass1
+    {
+        public static void Main(string[] args)
+        {
+            string Str1 = "Mgm College Nanded";
+            string Str2 = " ITM College";
+            Console.WriteLine(string.Concat(Str1,Str2));
+            Console.WriteLine(string.Compare(Str1,Str2));
+            Console.WriteLine(string.Equals(Str1,Str2));
+            Console.WriteLine(Str1.IndexOf('C'));
+            Console.WriteLine(Str1.Substring(4));
+            Console.WriteLine(Str1.Replace("Mgm","Yeshwant"));
+            Console.WriteLine(Str1.ToUpper());
+            Console.WriteLine(Str1.ToLower());
+            Console.WriteLine(Str1.Length);
+            Console.WriteLine(Str1.Remove(3,6));
+        }
+    } 
+}
+===========================================================================================
+23. Sum Of Array
+using System.Runtime.InteropServices;
+
+namespace example10
+{
+    class ArrayFun
+    {
+        public static void Main(string[] args)
+        {
+            int sum = 0;
+            int[] arr = new int[5] { 10, 20, 30, 40, 50 };
+          for(int i=0;i<arr.Length;i++)
+            {
+                sum = sum + arr[i];
+            }
+            Console.WriteLine("Sum Array Element=" + sum);
+        }
+    }
+}
+=====================================================================================
+24. Sum Of Input Array
+using System.Runtime.InteropServices;
+
+namespace example11
+{
+    class ArrayFun
+    {
+        public static void Main(string[] args)
+        {
+            int sum = 0;
+            int[] arr = new int[5];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = int.Parse(Console.ReadLine());
+                sum = sum + arr[i];
+            }
+            Console.WriteLine("Sum Array Element=" + sum);
+        }
+    }
+}
+============================================================================================
+25. Two Dimension Array
+namespace exampled
+{
+    class Dimen
+    {
+        public static void Main(string[] args)
+        {
+            int[,] arr = new int[3, 2] { { 10, 20 }, { 20, 30 }, { 40, 50 } };
+            Console.WriteLine(arr[2, 0]);
+        }
+    }
+}
+
+*********************Windows Applications Programs************************
+1.
+ public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int num1, num2, add;
+            num1 = Convert.ToInt32(textBox1.Text);
+            num2 = Convert.ToInt32(textBox2.Text);
+            add = num1 + num2;
+            textBox3.Text = add.ToString();
+        }
+    }
+}
+==================================================================================
+2.
+namespace Addnew
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int a, b, c;
+            a = Convert.ToInt32(textBox1.Text);
+            b = Convert.ToInt32(textBox2.Text);
+            c = a + b;
+            textBox3.Text = c.ToString();
+        }
+    }
+}
+=======================================================================================
+3.
+namespace WinFormsApp8
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int len, bre, area;
+            len = Convert.ToInt32(textBox1.Text);
+            bre = Convert.ToInt32(textBox2.Text);
+            area = len * bre;
+            textBox3.Text = area.ToString();
+
+        }
+    }
+}
+======================================================================================
+4.
+namespace Arithmaticoperator
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int a, b, c;
+            a = Convert.ToInt32(textBox1.Text);
+            b = Convert.ToInt32(textBox2.Text);
+            c = a + b;
+            textBox3.Text = c.ToString();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int a, b, c;
+            a = Convert.ToInt32(textBox1.Text);
+            b = Convert.ToInt32(textBox2.Text);
+            c = a - b;
+            textBox3.Text = c.ToString();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int a, b, c;
+            a = Convert.ToInt32(textBox1.Text);
+            b = Convert.ToInt32(textBox2.Text);
+            c = a * b;
+            textBox3.Text = c.ToString();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int a, b, c;
+            a = Convert.ToInt32(textBox1.Text);
+            b = Convert.ToInt32(textBox2.Text);
+            c = a / b;
+            textBox3.Text = c.ToString();
+        }
+    }
+}
+============================================================================
+5.
+using System.Windows.Forms.VisualStyles;
+
+namespace Checkbox
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(checkBox1.Checked==true && checkBox2.Checked==true)
+            {
+                MessageBox.Show("User selected java and C++");
+            }
+            else if(checkBox2.Checked==true)
+            {
+                MessageBox.Show("User selected C++");
+            }
+
+            else if (checkBox3.Checked == true)
+            {
+                MessageBox.Show("User selected RDBMS");
+            }
+            else if (checkBox4.Checked == true)
+            {
+                MessageBox.Show("User selected Linux ");
+            }
+        }
+    }
+}
+====================================================================================
+6.
+namespace WinFormsApp3
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                MessageBox.Show("User Selected Java");
+
+                if (checkBox2.Checked == true)
+                {
+                    MessageBox.Show("User Selected Java and Python");
+                }
+            }
+            else if (checkBox3.Checked == true && checkBox2.Checked == true && checkBox1.Checked == true)
+            {
+                MessageBox.Show("User Selected Java,Python and C++");
+            }
+            else if (checkBox4.Checked == true && checkBox3.Checked == true && checkBox2.Checked == true && checkBox1.Checked == true)
+            {
+                MessageBox.Show("User Selected Java,Python,C++ and Linux");
+            }
+
+        }
+        
+    }
+}
+===================================================================================
+7.
+namespace WinFormsApp7
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int num1;
+            num1 = Convert.ToInt32(textBox1.Text);
+            int Cube = num1 * num1 * num1;
+            textBox2.Text = Cube.ToString();
+        }
+    }
+}
+=======================================================================================
+8.
+namespace Fibonysis
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int a;
+            a = Convert.ToInt32(textBox1.Text);
+            if(a%2==0)
+            {
+                textBox2.Text = "Number is even";
+            }
+            else
+            {
+                textBox2.Text = "Number is odd";
+            }
+        }
+    }
+}
+===================================================================================
+9.
+namespace Fact
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int num, fact = 1;
+            num = Convert.ToInt32(textBox1.Text);
+            for(int i=1;i<=num;i++)
+            {
+                fact = fact * i;
+                
+            }
+            textBox2.Text = fact.ToString();
+        }
+    }
+}
+====================================================================================
+10.
+using System.Security.Cryptography.X509Certificates;
+
+namespace Factnew
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int num, fact = 1,x;
+            num = Convert.ToInt32(textBox1.Text);
+            for(x = 1;x <= num;x++)
+            {
+                fact = fact * x;
+            }
+            textBox2.Text = fact.ToString();
+        }
+    }
+}
+=================================================================================
+11.
+namespace Subtraction
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int num1, fact = 1;
+            num1 = Convert.ToInt32(textBox1.Text);
+            for(int x=1;x<=num1;x++)
+            {
+                fact = fact * x;
+            }
+            textBox2.Text = fact.ToString();
+        }
+    }
+}
+==================================================================================
+12.
+namespace Formtoform2
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            ListBox lb = new ListBox();
+            lb.BackColor = Color.Coral;
+            lb.Width = 200;
+            lb.Items.Add("java");
+            lb.Items.Add("Linux");
+            lb.Items.Add("RDBMS");
+            lb.Items.Add("DS");
+            lb.Items.Insert(2, "C++");
+            lb.Items.Remove("DS");
+            lb.Items.Clear();
+            lb.Items.RemoveAt(3);
+            this.Controls.Add(lb);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+       
+        }
+    }
+}
+=================================================================================
+13.
+namespace login
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            String userid = "123ABC";
+            String pass = "12345";
+            if (userid == textBox1.Text && pass==textBox2.Text)
+            {
+                MessageBox.Show("Login Successful");
+            }
+            else
+            {
+                MessageBox.Show("Invalid userid and password");
+            }
+        }
+    }
+}
+=================================================================================
+14.
+namespace WinFormsApp9
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            String msg = "MGM Colege";
+            String a = "Hello World";
+            MessageBox.Show(msg,a,MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+        }
+    }
+}
+=====================================================================================
+15.
+namespace WinFormsApp13
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int Python, C, Ds, Evs, Linux;
+            Python = Convert.ToInt32(textBox1.Text);
+            C = Convert.ToInt32(textBox2.Text);
+            Ds = Convert.ToInt32(textBox3.Text);
+            Linux = Convert.ToInt32(textBox4.Text);
+            Evs = Convert.ToInt32(textBox5.Text);
+            int total = Python + C + Ds + Linux + Evs;
+            textBox6.Text = total.ToString();
+            float percentage = total / 5;
+            textBox7.Text = percentage.ToString();
+
+        }
+    }
+}
+=========================================================================================
+16.
+namespace Radio
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked == true)
+
+            {
+                MessageBox.Show("User selected item Yes");
+            }
+
+
+            else if (radioButton2.Checked == true)
+            {
+                MessageBox.Show("User selected item NO");
+            }
+            else
+            {
+                MessageBox.Show("User not selected item");
+            }
+            
+        }
+    }
+}
+=====================================================================================
+17.
+namespace WinFormsApp1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(radioButton1.Checked==true)
+            {
+                MessageBox.Show("User can selected Yes");
+            }
+            else
+            {
+                MessageBox.Show("User can selected No");
+            }
+        }
+    }
+}
+=======================================================================================
+18.
+namespace WinFormsApp2
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(radioButton1.Checked==true)
+            {
+                MessageBox.Show("User can selected Open Catageory");
+            }
+        }
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton2.Checked == true)
+            {
+                MessageBox.Show("User can selected SC Catageory");
+            }
+        }
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton3.Checked == true)
+            {
+                MessageBox.Show("User can selected ST Catageory");
+            }
+        }
+    }
+}
+===================================================================================
+19.
+namespace WinFormsApp6
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int num1, num2;
+            num1 = Convert.ToInt32(textBox1.Text);
+            num2 = Convert.ToInt32(textBox2.Text);
+            int Square1 = num1 * num1;
+            int Square2 = num2 * num2;
+            textBox3.Text = Square1.ToString();
+            textBox4.Text = Square2.ToString();
+        }
+    }
+}
+==================================================================================
+20.
+using System.Reflection.PortableExecutable;
+
+namespace Example
+{
+    class Call
+    {
+        public void show(int x)
+        {
+            x = x + 20;
+            Console.WriteLine("Modify Value=" + x);
+        }
+
+        public static void Main(string[]args)
+        {
+            Call c1 = new Call();
+            int x=30;
+            c1.show(x);
+
+            Console.WriteLine("After call Value=" + x);
+
+            Console.ReadLine();
+        }
+    }
+}
+===============================================================================

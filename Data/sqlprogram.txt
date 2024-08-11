@@ -1,0 +1,1134 @@
+NAME:PUYED KRISHNA VISHWANATH
+CLASS:SY-BCS
+BATCH:B
+COLLEGE NAME:MGM'S COLLEGE CS&IT NANDED
+SUB:RDBMS PRATICAL
+
+
+============================================================================
+
+
+*CREATE TABLE*
+Syntax:
+create table table_name
+(column1 datatype(size),
+column2 datatype(size),
+column3 datatype(size));
+
+*Example*
+
+mysql> create table student(Rollno int(3),Name varchar(20),class varchar(10),marks int(4));
+
+============================================================================================
+
+*INSERT VALUE*
+Syntax:
+insert into table_name values(value1,value2,value3);
+
+Example:
+
+mysql> insert into student values(1,'krishna','SYBCS',90);
+mysql> insert into student values(2,'Ram','FYBCS',75);
+mysql> insert into student values(3,'Jay','TYBCA',68);
+mysql> insert into student values(4,'Amol','BA',55);
+mysql> insert into student values(5,'Govind','BCOM',60);
+mysql> insert into student values(6,'Dilip','MPSC',84);
+mysql> select *from student;
++--------+---------+-------+-------+
+| Rollno | Name    | class | marks |
++--------+---------+-------+-------+
+|      1 | krishna | SYBCS |    90 |
+|      2 | Ram     | FYBCS |    75 |
+|      3 | Jay     | TYBCA |    68 |
+|      4 | Amol    | BA    |    55 |
+|      5 | Govind  | BCOM  |    60 |
+|      6 | Dilip   | MPSC  |    84 |
++--------+---------+-------+-------+
+6 rows in set (0.00 sec)
+==================================================================================
+*UPDATE COMMAND*
+Syntax:
+update table_name set column_name=value where condition;
+
+Example:
+
+mysql> update student set Name='sonu' where Rollno=2;
+mysql> select *from student;
++--------+---------+-------+-------+
+| Rollno | Name    | class | marks |
++--------+---------+-------+-------+
+|      1 | krishna | SYBCS |    90 |
+|      2 | sonu    | FYBCS |    75 |
+|      3 | Jay     | TYBCA |    68 |
+|      4 | Amol    | BA    |    55 |
+|      5 | Govind  | BCOM  |    60 |
+|      6 | Dilip   | MPSC  |    84 |
++--------+---------+-------+-------+
+6 rows in set (0.00 sec)
+==================================================================================
+*UPDATE COMMAND*
+Syntax:
+update table_name set column_name=expression;
+
+Example:
+mysql> update student set marks=95;
+mysql> select *from student;
++--------+---------+-------+-------+
+| Rollno | Name    | class | marks |
++--------+---------+-------+-------+
+|      1 | krishna | SYBCS |    95 |
+|      2 | sonu    | FYBCS |    95 |
+|      3 | Jay     | TYBCA |    95 |
+|      4 | Amol    | BA    |    95 |
+|      5 | Govind  | BCOM  |    95 |
+|      6 | Dilip   | MPSC  |    95 |
++--------+---------+-------+-------+
+6 rows in set (0.00 sec)
+======================================================================================
+
+*ALTER COMMAAND*
+Syntax:
+alter table table_name add(new_column datatype(size));
+
+Example:
+mysql> alter table student add(gread varchar(2));
+mysql> select *from student;
++--------+---------+-------+-------+-------+
+| Rollno | Name    | class | marks | gread |
++--------+---------+-------+-------+-------+
+|      1 | krishna | SYBCS |    90 | NULL  |
+|      2 | sonu    | FYBCS |    75 | NULL  |
+|      3 | Jay     | TYBCA |    68 | NULL  |
+|      4 | Amol    | BA    |    55 | NULL  |
+|      5 | Govind  | BCOM  |    60 | NULL  |
+|      6 | Dilip   | MPSC  |    84 | NULL  |
++--------+---------+-------+-------+-------+
+6 rows in set (0.00 sec)
+
+======================================================================
+Syntax:
+alter table table_name modify(new_column new_datatype(newsize));
+
+Example:
+
+mysql>alter table student modify(class varchar2(10));
+mysql> select *from student;
++--------+---------+-------+-------+
+| Rollno | Name    | class | marks |
++--------+---------+-------+-------+
+|      1 | krishna | SYBCS |    90 |
+|      2 | sonu    | FYBCS |    75 |
+|      3 | Jay     | TYBCA |    68 |
+|      4 | Amol    | BA    |    55 |
+|      5 | Govind  | BCOM  |    60 |
+|      6 | Dilip   | MPSC  |    84 |
++--------+---------+-------+-------+
+====================================================================================
+Syntax:
+alter table table_name drop column column_name;
+
+Example:
+
+mysql> alter table student drop column gread;
+
+
+mysql> select *from student;
++--------+---------+-------+-------+
+| Rollno | Name    | class | marks |
++--------+---------+-------+-------+
+|      1 | krishna | SYBCS |    90 |
+|      2 | sonu    | FYBCS |    75 |
+|      3 | Jay     | TYBCA |    68 |
+|      4 | Amol    | BA    |    55 |
+|      5 | Govind  | BCOM  |    60 |
+|      6 | Dilip   | MPSC  |    84 |
++--------+---------+-------+-------+
+6 rows in set (0.00 sec)
+=================================================================================
+*DELETE COMMAND*
+Syntax:
+delete from table_name where column_name=condition;
+
+Example:
+
+mysql> delete from student where rollno>=4;
+mysql> select *from student;
++--------+---------+-------+-------+
+| Rollno | Name    | class | marks |
++--------+---------+-------+-------+
+|      1 | krishna | SYBCS |    95 |
+|      2 | sonu    | FYBCS |    95 |
+|      3 | Jay     | TYBCA |    95 |
++--------+---------+-------+-------+
+3 rows in set (0.10 sec)
+===========================================================================
+Syntax:
+delete from table_name;
+
+Example:
+
+mysql> delete from student;
+
+mysql> select *from student;
+Empty set (0.00 sec)
+======================================================================================
+*DROP COMMAND*
+Syntax:
+drop table table_name;
+
+Example:
+
+mysql> drop table student;
+Query OK, 0 rows affected (1.13 sec)
+
+================================================================================
+*DESC COMMAND*
+Syntax:
+desc table table_name;
+
+Example:
+
+mysql>  desc table demo;
++----+-------------+-------+------------+------+---------------+------+---------+------+------+----------+-------+
+| id | select_type | table | partitions | type | possible_keys | key  | key_len | ref  | rows | filtered | Extra |
++----+-------------+-------+------------+------+---------------+------+---------+------+------+----------+-------+
+|  1 | SIMPLE      | demo  | NULL       | ALL  | NULL          | NULL | NULL    | NULL |    3 |   100.00 | NULL  |
++----+-------------+-------+------------+------+---------------+------+---------+------+------+----------+-------+
+1 row in set, 1 warning (0.00 sec)
+==============================================================================
+*COLUMN ALISES*
+Syntax:
+select current_columnname as new_columnname from table_name;
+
+Example:
+
+mysql> select rollno as roll from student;
++------+
+| roll |
++------+
+|    1 |
+|    2 |
+|    3 |
+|    4 |
++------+
+4 rows in set (0.00 sec)
+
+=============================================================================
+*SELECT COMMAND*
+Syntax 1:
+select *from table_name;
+
+Example:
+mysql> select *from product;
++------+---------+--------+
+| id   | name    | city   |
++------+---------+--------+
+|    1 | Redmi   | Mumbai |
+|    2 | Samsung | Pune   |
+|    3 | Vivo    | Nashik |
++------+---------+--------+
+3 rows in set (0.03 sec)
+
+Syntax 2:
+select column_name1,column_name2 from table_name;
+
+Example:
+
+mysql> select name,city from product;
++---------+--------+
+| name    | city   |
++---------+--------+
+| Redmi   | Mumbai |
+| Samsung | Pune   |
+| Vivo    | Nashik |
++---------+--------+
+3 rows in set (0.00 sec)
+
+Syntax 3:
+select column_name from table_name where column_name=condition;
+
+Example:
+
+mysql> select name from product where id>2;
++------+
+| name |
++------+
+| Vivo |
++------+
+
+=============================================================================
+*VIEWS COMMAND*
+Syntax 1:
+create view view_name as select *from table_name;
+
+Example:
+mysql> create view vie_na as select *from student;
+mysql> select *from vie_na;
++--------+---------+-------+-------+
+| Rollno | Name    | class | marks |
++--------+---------+-------+-------+
+|      1 | Krishna | SYBCS |    90 |
+|      2 | Sonu    | FYBCS |    80 |
+|      3 | Ram     | SYBCA |    85 |
+|      4 | Jay     | BA    |    60 |
++--------+---------+-------+-------+
+4 rows in set (0.14 sec)
+
+*INSERTING VIEW*
+Syntax:
+insert into view_name values(value1,value2,value3,value4);
+
+Example:
+mysql> insert into vie_na values(5,'Rohit','BSC',87);
+mysql> select *from vie_na;
++--------+---------+-------+-------+
+| Rollno | Name    | class | marks |
++--------+---------+-------+-------+
+|      1 | Krishna | SYBCS |    90 |
+|      2 | Sonu    | FYBCS |    80 |
+|      3 | Ram     | SYBCA |    85 |
+|      4 | Jay     | BA    |    60 |
+|      5 | Rohit   | BSC   |    87 |
++--------+---------+-------+-------+
+5 rows in set (0.00 sec)
+
+*UPDATING VIEW*
+Syntax:
+update view_name set column_name=value;
+
+Example:
+mysql> update vie_na set marks=100;
+mysql> select *from vie_na;
++--------+---------+-------+-------+
+| Rollno | Name    | class | marks |
++--------+---------+-------+-------+
+|      1 | Krishna | SYBCS |   100 |
+|      2 | Sonu    | FYBCS |   100 |
+|      3 | Ram     | SYBCA |   100 |
+|      4 | Jay     | BA    |   100 |
+|      5 | Rohit   | BSC   |   100 |
++--------+---------+-------+-------+
+5 rows in set (0.00 sec)
+==================================================================================
+*Arithmetic Operator*
+mysql> select 10+20;
++-------+
+| 10+20 |
++-------+
+|    30 |
++-------+
+1 row in set (0.00 sec)
+
+mysql> select 20-10;
++-------+
+| 20-10 |
++-------+
+|    10 |
++-------+
+1 row in set (0.00 sec)
+
+mysql> select 100/10;
++---------+
+| 100/10  |
++---------+
+| 10.0000 |
++---------+
+1 row in set (0.00 sec)
+
+mysql> select 100%5;
++-------+
+| 100%5 |
++-------+
+|     0 |
++-------+
+=========================================================================
+*Relation Operator*
+Syntax1:
+select *from table_name where column_name=condition; 
+
+mysql> select *from student where Rollno=3;
++--------+------+-------+-------+
+| Rollno | Name | class | marks |
++--------+------+-------+-------+
+|      3 | Jay  | TYBCA |    68 |
++--------+------+-------+-------+
+1 row in set (0.00 sec)
+
+Syntax2:
+select *from table_name where column_name>=condition; 
+
+mysql> select *from student where Rollno>=2;
++--------+--------+-------+-------+
+| Rollno | Name   | class | marks |
++--------+--------+-------+-------+
+|      2 | sonu   | FYBCS |    75 |
+|      3 | Jay    | TYBCA |    68 |
+|      4 | Amol   | BA    |    55 |
+|      5 | Govind | BCOM  |    60 |
+|      6 | Dilip  | MPSC  |    84 |
++--------+--------+-------+-------+
+5 rows in set (0.00 sec)
+
+Syntax3:
+select *from table_name where column_name>condition; 
+
+mysql> select *from student where rollno>2;
++--------+------+-------+-------+
+| Rollno | Name | class | marks |
++--------+------+-------+-------+
+|      3 | Ram  | SYBCA |    85 |
+|      4 | Jay  | BA    |    60 |
++--------+------+-------+-------+
+2 rows in set (0.00 sec)
+
+Syntax4:
+select *from table_name where column_name<condition; 
+
+mysql> select *from student where rollno<3;
++--------+---------+-------+-------+
+| Rollno | Name    | class | marks |
++--------+---------+-------+-------+
+|      1 | Krishna | SYBCS |    90 |
+|      2 | Sonu    | FYBCS |    80 |
++--------+---------+-------+-------+
+2 rows in set (0.00 sec)
+
+Syntax5:
+select *from table_name where column_name<=condition; 
+
+mysql> select *from student where rollno<=3;
++--------+---------+-------+-------+
+| Rollno | Name    | class | marks |
++--------+---------+-------+-------+
+|      1 | Krishna | SYBCS |    90 |
+|      2 | Sonu    | FYBCS |    80 |
+|      3 | Ram     | SYBCA |    85 |
++--------+---------+-------+-------+
+
+Syntax6:
+select *from table_name where column_name!=condition; 
+
+mysql> select *from student where Rollno!=4;
++--------+---------+-------+-------+
+| Rollno | Name    | class | marks |
++--------+---------+-------+-------+
+|      1 | krishna | SYBCS |    90 |
+|      2 | sonu    | FYBCS |    75 |
+|      3 | Jay     | TYBCA |    68 |
+|      5 | Govind  | BCOM  |    60 |
+|      6 | Dilip   | MPSC  |    84 |
++--------+---------+-------+-------+
+5 rows in set (0.00 sec)
+==============================================================================
+*Logical Operator*
+
+1.And Operator
+Synatx:
+select *from table_name where column_name1=expression AND column_name2=expression;
+
+EX:
+mysql> select *from student where Name='krishna' AND Rollno=1;
++--------+---------+-------+-------+
+| Rollno | Name    | class | marks |
++--------+---------+-------+-------+
+|      1 | krishna | SYBCS |    90 |
++--------+---------+-------+-------+
+1 row in set (0.00 sec)
+
+2.OR Operator
+
+Syntax:
+select *from table_name where column_name1=expression OR column_name2=expression;
+
+EX:
+select *from table_name where column_name1=expression AND column_name2=expression;
+mysql> select *from student where class='FYBCS' OR marks=60;
++--------+--------+-------+-------+
+| Rollno | Name   | class | marks |
++--------+--------+-------+-------+
+|      2 | sonu   | FYBCS |    75 |
+|      5 | Govind | BCOM  |    60 |
++--------+--------+-------+-------+
+2 rows in set (0.00 sec)
+
+3.NOT Operator
+Syntax:
+select *from table_name where not column_name=expression;
+EX:
+mysql> select *from student where not(Rollno=5);
++--------+---------+-------+-------+
+| Rollno | Name    | class | marks |
++--------+---------+-------+-------+
+|      1 | krishna | SYBCS |    90 |
+|      2 | sonu    | FYBCS |    75 |
+|      3 | Jay     | TYBCA |    68 |
+|      4 | Amol    | BA    |    55 |
+|      6 | Dilip   | MPSC  |    84 |
++--------+---------+-------+-------+
+5 rows in set (0.00 sec)
+================================================================================================
+
+*Comparison Operator*
+1.BETWEEN Operator
+Syntax:
+select *from table_name where column_name BETWEEN value1 AND value2;
+EX:
+mysql> select *from student where marks BETWEEN 55 AND 95;
++--------+---------+-------+-------+
+| Rollno | Name    | class | marks |
++--------+---------+-------+-------+
+|      1 | krishna | SYBCS |    90 |
+|      2 | sonu    | FYBCS |    75 |
+|      3 | Jay     | TYBCA |    68 |
+|      4 | Amol    | BA    |    55 |
+|      5 | Govind  | BCOM  |    60 |
+|      6 | Dilip   | MPSC  |    84 |
++--------+---------+-------+-------+
+6 rows in set (0.00 sec)
+
+mysql> select *from student where marks BETWEEN 69 AND 90;
++--------+---------+-------+-------+
+| Rollno | Name    | class | marks |
++--------+---------+-------+-------+
+|      1 | krishna | SYBCS |    90 |
+|      2 | sonu    | FYBCS |    75 |
+|      6 | Dilip   | MPSC  |    84 |
++--------+---------+-------+-------+
+3 rows in set (0.00 sec)
+
+
+2.IN Operator
+Syntax:
+select *from table_name where column_name IN(value1,value2,value3);
+EX:
+mysql> select *from sonu where marks IN(60,75);
++--------+--------+-------+-------+
+| Rollno | Name   | class | marks |
++--------+--------+-------+-------+
+|     20 | Deepak | SYBSC |    60 |
+|     40 | Rohit  | FYBCS |    75 |
++--------+--------+-------+-------+
+2 rows in set (0.00 sec)
+
+3.LIKE Operator
+Syntax:
+select *from table_name where column_name LIKE 'character%';
+EX:
+mysql> select *from student where Name LIKE's%';
++--------+------+-------+-------+
+| Rollno | Name | class | marks |
++--------+------+-------+-------+
+|      2 | sonu | FYBCS |    75 |
++--------+------+-------+-------+
+1 row in set (0.00 sec)
+
+mysql> select *from student where Name LIKE'G%';
++--------+--------+-------+-------+
+| Rollno | Name   | class | marks |
++--------+--------+-------+-------+
+|      5 | Govind | BCOM  |    60 |
++--------+--------+-------+-------+
+1 row in set (0.00 sec)
+
+mysql> select *from student where name like'_r%';
++--------+---------+-------+-------+
+| Rollno | Name    | class | marks |
++--------+---------+-------+-------+
+|      1 | Krishna | SYBCS |    90 |
++--------+---------+-------+-------+
+1 row in set (0.00 sec)
+
+mysql> select *from student where name like'__n%';
++--------+------+-------+-------+
+| Rollno | Name | class | marks |
++--------+------+-------+-------+
+|      2 | Sonu | FYBCS |    80 |
++--------+------+-------+-------+
+1 row in set (0.00 sec)
+
+mysql> select *from student where name like'_r_s%';
++--------+---------+-------+-------+
+| Rollno | Name    | class | marks |
++--------+---------+-------+-------+
+|      1 | Krishna | SYBCS |    90 |
++--------+---------+-------+-------+
+1 row in set (0.00 sec)
+====================================================================================================
+
+*Single Row Function*
+1.String Function
+
+Syntax:
+select upper(character)from dual;
+EX:
+mysql> select upper("hello") from dual;
++----------------+
+| upper("hello") |
++----------------+
+| HELLO          |
++----------------+
+1 row in set (0.00 sec)
+
+Syntax:
+select lower(character)from dual;
+EX:
+mysql> select lower("HELLO") from dual;
++----------------+
+| lower("HELLO") |
++----------------+
+| hello          |
++----------------+
+1 row in set (0.00 sec)
+
+Syntax:
+select initcap(character)from dual;
+EX:
+mysql> select initcap("hello") from dual;
++----------------+
+| initcap("hello") |
++----------------+
+| Hello          |
++----------------+
+Syntax:
+select upper(character1,character2)from dual;
+EX:
+mysql> select concat("Hello","world");
++-------------------------+
+| concat("Hello","world") |
++-------------------------+
+| Helloworld              |
++-------------------------+
+1 row in set (0.00 sec)
+
+Syntax:
+select substr(character,start portion value,End portion value)from dual;
+EX:
+mysql> select substr('oracle',3,4)from dual;
++----------------------+
+| substr('oracle',3,4) |
++----------------------+
+| acle                 |
++----------------------+
+1 row in set (0.00 sec)
+
+
+Syntax:
+select instr(character,find character)from dual;
+EX:
+mysql> select instr("Oracle","a")from dual;
++---------------------+
+| instr("Oracle","a") |
++---------------------+
+|                   3 |
++---------------------+
+1 row in set (0.00 sec)
+
+Syntax:
+select length(character)from dual;
+EX:
+mysql> select length('Hello')from dual;
++-----------------+
+| length('Hello') |
++-----------------+
+|               5 |
++-----------------+
+1 row in set (0.00 sec)
+
+
+Syntax:
+select lpad(character,size,new character)from dual;
+EX:
+mysql> select lpad('sonu',10,'#')from dual;
++---------------------+
+| lpad('sonu',10,'#') |
++---------------------+
+| ######sonu          |
++---------------------+
+1 row in set (0.00 sec)
+select rpad(character,size,new character)from dual;
+EX:
+mysql> select rpad('monu',10,'#')from dual;
++---------------------+
+| rpad('monu',10,'#') |
++---------------------+
+| monu######          |
++---------------------+
+1 row in set (0.00 sec)
+Syntax:
+
+select replace(character,search string,replace string)from dual;
+EX:
+mysql> select replace('black','b','oo')from dual;
++---------------------------+
+| replace('black','b','oo') |
++---------------------------+
+| oolack                    |
++---------------------------+
+1 row in set (0.00 sec)
+
+mysql> select replace('jack','j','Bl')from dual;
++--------------------------+
+| replace('jack','j','Bl') |
++--------------------------+
+| Black                    |
++--------------------------+
+1 row in set (0.00 sec)
+
+Syntax:
+select trim(both 'remove character' from character)from dual;
+EX:
+mysql> select trim(both 'x' from 'xsqlx')from dual;
++-----------------------------+
+| trim(both 'x' from 'xsqlx') |
++-----------------------------+
+| sql                         |
++-----------------------------+
+1 row in set (0.07 sec)
+=====================================================================================
+2.Number Function
+*Round*
+Syntax:
+select round(Fraction value)from dual;
+EX:
+mysql> select round(56.6)from dual;
++-------------+
+| round(56.6) |
++-------------+
+|          57 |
++-------------+
+1 row in set (0.00 sec)
+
+*MOD*
+
+Syntax:
+select mod(value,mod value)from dual;
+EX:
+mysql> select mod(100,3)from dual;
++------------+
+| mod(100,3) |
++------------+
+|          1 |
++------------+
+1 row in set (0.00 sec)
+
+*SQRT*
+Syntax:
+select sqrt(value)from dual;
+EX:
+mysql> select sqrt(625)from dual;
++-----------+
+| sqrt(625) |
++-----------+
+|        25 |
++-----------+
+1 row in set (0.00 sec)
+
+*ABS*
+Syntax:
+select abs(negative value)from dual;
+EX:
+mysql> select abs(-67)from dual;
++----------+
+| abs(-67) |
++----------+
+|       67 |
++----------+
+1 row in set (0.00 sec)
+
+*POWER*
+Syntax:
+select power(value,power value)from dual;
+EX:
+mysql> select power(3,2)from dual;
++------------+
+| power(3,2) |
++------------+
+|          9 |
++------------+
+1 row in set (0.00 sec)
+================================================================================
+*Date Function*
+1.SYSDATE
+Syntax:
+select sysdate from dual;
+EX:
+select sysdate from dual;
++--------------+
+| sysdate |
++--------------+
+| 2022-05-16   |
++--------------+
+1 row in set (0.00 sec)
+
+2.Add_months
+Synatx:
+select add_months(sysdate,number)from dual;
+
+EX:
+mysql> select add_months(sysdate,4) from dual;
++------------------------+
+| add_months(sysdate) |
++------------------------+
+| 2022-09-16            |
++------------------------+
+1 row in set (0.00 sec)
+
+3.Last_day
+
+Syntax:
+select last_day(system date)from dual;
+
+EX:
+mysql> select last_day(current_date) from dual;
++------------------------+
+| last_day(current_date) |
++------------------------+
+| 2022-05-31             |
++------------------------+
+1 row in set (0.00 sec)
+
+4.Months_between
+
+Syntax:
+select months_between(date1,date2)from dual;
+
+EX:
+mysql> select months_between('12-05-2022','27-08-2022') from dual;
++------------------------+
+| months_between(date1,date2) |
++------------------------+
+| 2022-05-31             |
++------------------------+
+1 row in set (0.00 sec)
+
+5.Next_day
+Syntax:
+select next_day(system date,week_day)from dual;
+
+EX:
+mysql> select next_day(sysdate,'friday') from dual;
++------------------------+
+| next_day(sysdate,friday) |
++------------------------+
+| 2022-05-20             |
++------------------------+
+1 row in set (0.00 sec)
+
+====================================================================
+
+*Multiple Row Function*
+
+1.COUNT
+
+Syntax:
+select count(column_name)from table_name;
+
+EX:
+
+mysql> select count(marks) from student;
++--------------+
+| count(marks) |
++--------------+
+|            5 |
++--------------+
+1 row in set (0.08 sec)
+
+2.MAX
+
+Syntax:
+
+select max(column_name)from table_name;
+
+EX:
+mysql> select max(marks) from student;
++--------------+
+| MAX(marks) |
++--------------+
+|            98 |
++--------------+
+1 row in set (0.08 sec)
+
+3.MIN
+
+Syntax:
+
+select min(column_name)from table_name;
+
+EX:
+mysql> select min(marks) from student;
++--------------+
+| MIN(marks) |
++--------------+
+|            50 |
++--------------+
+1 row in set (0.08 sec)
+
+4.SUM
+
+Syntax:
+
+select sum(column_name)from table_name;
+
+EX:
+mysql> select sum(marks) from student;
++--------------+
+| sum(marks) |
++--------------+
+|            400 |
++--------------+
+1 row in set (0.08 sec)
+
+
+5.AVG
+
+Syntax:
+
+select avg(column_name)from table_name;
+
+EX:
+mysql> select avg(marks) from student;
++--------------+
+| AVG(marks) |
++--------------+
+|         80.000|
++--------------+
+1 row in set (0.08 sec)
+
+==================================================================
+
+*ORDER BY*
+
+1.Ascending ORDER/BY Default ascending order
+
+Syntax:
+select column_name from table_name order by column_name;
+
+EX:
+mysql> select id from product order by id;
++------+
+| id   |
++------+
+|    1 |
+|    2 |
+|    3 |
++------+
+3 rows in set (0.00 sec)
+
+2.Descending Order
+
+Syntax:
+
+select *from table_name order by column_name desc;
+
+EX:
+mysql> select *from product order by name desc;
++------+---------+--------+
+| id   | name    | city   |
++------+---------+--------+
+|    3 | Vivo    | Nashik |
+|    2 | Samsung | Pune   |
+|    1 | Redmi   | Mumbai |
++------+---------+--------+
+3 rows in set (0.00 sec)
+
+============================================================================
+
+*GROUP BY / HAVING CLAUSE*
+
+mysql> select *from student;
++--------+---------+-------+-------+
+| Rollno | Name    | class | marks |
++--------+---------+-------+-------+
+|      1 | Krishna | BA    |   100 |
+|      2 | Sonu    | FYBCS |   100 |
+|      3 | Ram     | SYBCA |   100 |
+|      4 | Jay     | BA    |   100 |
+|      5 | Rohit   | FYBSC |   100 |
++--------+---------+-------+-------+
+5 rows in set (0.00 sec)
+
+Syntax1:
+
+select column_name,count(column_name)from table_name group by column_name;
+
+EX:
+mysql> select class,count(*)from student group by class;
++-------+----------+
+| class | count(*) |
++-------+----------+
+| BA    |        2 |
+| FYBCS |        1 |
+| SYBCA |        1 |
+| FYBSC |        1 |
++-------+----------+
+4 rows in set (0.08 sec)
+
+2.Having clause
+Syntax:
+
+select column_name,count(column_name)from table_name group by column_name having count(column_name)<condition;
+EX:
+mysql> select class from student group by class having count(*)>1;
++-------+
+| class |
++-------+
+| BA    |
++-------+
+1 row in set (0.00 sec)
+
+===================================================================================
+
+*JOIN TABLE*
+
+mysql> select *from product;
++------+---------+--------+
+| id   | name    | city   |
++------+---------+--------+
+|    1 | Redmi   | Mumbai |
+|    2 | Samsung | Pune   |
+|    3 | Vivo    | Nashik |
++------+---------+--------+
+3 rows in set (0.08 sec)
+
+mysql> select *from company;
++------+----------+-------+
+| id   | countary | price |
++------+----------+-------+
+|    2 | India    |  5000 |
+|    3 | Japan    |  7000 |
+|    4 | UAE      |  9000 |
++------+----------+-------+
+3 rows in set (0.04 sec)
+
+1.EQUI JOIN
+
+syntax1:
+select *from table_name1,table_name2 where table_name1.common_column=table_name2.common_column;
+ 
+EX:
+mysql> select *from product,company where product.id=company.id;
++------+---------+--------+------+----------+-------+
+| id   | name    | city   | id   | countary | price |
++------+---------+--------+------+----------+-------+
+|    2 | Samsung | Pune   |    2 | India    |  5000 |
+|    3 | Vivo    | Nashik |    3 | Japan    |  7000 |
++------+---------+--------+------+----------+-------+
+2 rows in set (0.00 sec)
+
+syntax2:
+select *from table_name1 join table_name2 where table_name1.common_column=table_name2.common_column;
+ EX:
+
+mysql> select *from product join  company where product.id=company.id;
++------+---------+--------+------+----------+-------+
+| id   | name    | city   | id   | countary | price |
++------+---------+--------+------+----------+-------+
+|    2 | Samsung | Pune   |    2 | India    |  5000 |
+|    3 | Vivo    | Nashik |    3 | Japan    |  7000 |
++------+---------+--------+------+----------+-------+
+2 rows in set (0.00 sec)
+
+2.NON EQUI JOIN
+
+syntax:
+select *from table_name1,table_name2 where table_name1>table_name2;
+
+EX:
+mysql> select *from product,company where product.id>company.id;
++------+------+--------+------+----------+-------+
+| id   | name | city   | id   | countary | price |
++------+------+--------+------+----------+-------+
+|    3 | Vivo | Nashik |    2 | India    |  5000 |
++------+------+--------+------+----------+-------+
+1 row in set (0.00 sec)
+
+3.INNER JOIN
+
+syntax:
+select *from table_name1 inner join table_name2 on table_name1.common_column=table_name2.common_column;
+
+EX:
+mysql> select *from product inner join company on product.id=company.id;
++------+---------+--------+------+----------+-------+
+| id   | name    | city   | id   | countary | price |
++------+---------+--------+------+----------+-------+
+|    2 | Samsung | Pune   |    2 | India    |  5000 |
+|    3 | Vivo    | Nashik |    3 | Japan    |  7000 |
++------+---------+--------+------+----------+-------+
+2 rows in set (0.00 sec)
+
+4.OUTER JOIN
+1.LEFT OUTER JOIN
+syntax:
+
+select *from table_name1 left outer join table_name2 on table_name1.common_column=table_name2.common_column;
+
+EX:
+mysql> select *from product left outer join company on product.id=company.id;
++------+---------+--------+------+----------+-------+
+| id   | name    | city   | id   | countary | price |
++------+---------+--------+------+----------+-------+
+|    1 | Redmi   | Mumbai | NULL | NULL     |  NULL |
+|    2 | Samsung | Pune   |    2 | India    |  5000 |
+|    3 | Vivo    | Nashik |    3 | Japan    |  7000 |
++------+---------+--------+------+----------+-------+
+3 rows in set (0.00 sec)
+
+2.RIGHT OUTER JOIN
+
+syntax:
+select *from table_name1 right outer join table_name2 on table_name1.common_column=table_name2.common_column;
+
+EX:
+
+mysql> select *from product right outer join company on product.id=company.id;
++------+---------+--------+------+----------+-------+
+| id   | name    | city   | id   | countary | price |
++------+---------+--------+------+----------+-------+
+|    2 | Samsung | Pune   |    2 | India    |  5000 |
+|    3 | Vivo    | Nashik |    3 | Japan    |  7000 |
+| NULL | NULL    | NULL   |    4 | UAE      |  9000 |
++------+---------+--------+------+----------+-------+
+3 rows in set (0.00 sec)
+
+3.FULL OUTER JOIN
+
+syntax:
+select *from table_name1 right outer join table_name2 on table_name1.common_column=table_name2.common_column;
+
+EX:
+
++------+---------+--------+------+----------+-------+
+| id   | name    | city   | id   | countary | price |
++------+---------+--------+------+----------+-------+
+|    2 | Samsung | Pune   |    2 | India    |  5000 |
+|    3 | Vivo    | Nashik |    3 | Japan    |  7000 |
+|    1 | Redmi   | Mumbai |    4 | UAE      |  9000 
+|
++------+---------+--------+------+----------+-------+
+============================================================================
+
+*CROSS JOIN*
+
+syntax:
+select *from table_name1 cross join table_name2;
+
+EX:
+mysql> select *from product cross join company;
++------+---------+--------+------+----------+-------+
+| id   | name    | city   | id   | countary | price |
++------+---------+--------+------+----------+-------+
+|    3 | Vivo    | Nashik |    2 | India    |  5000 |
+|    2 | Samsung | Pune   |    2 | India    |  5000 |
+|    1 | Redmi   | Mumbai |    2 | India    |  5000 |
+|    3 | Vivo    | Nashik |    3 | Japan    |  7000 |
+|    2 | Samsung | Pune   |    3 | Japan    |  7000 |
+|    1 | Redmi   | Mumbai |    3 | Japan    |  7000 |
+|    3 | Vivo    | Nashik |    4 | UAE      |  9000 |
+|    2 | Samsung | Pune   |    4 | UAE      |  9000 |
+|    1 | Redmi   | Mumbai |    4 | UAE      |  9000 |
++------+---------+--------+------+----------+-------+
+9 rows in set (0.00 sec)
+
+========================================================================
+

@@ -1,0 +1,974 @@
+*************************Python Programs*********************
+#.Write a program to simple print function
+print("Hello")
+print("Welcome")
+print("Welcome MGM")
+print("Good Morning")
+==============================================================================
+1.Armstrong Number
+num=int(input("enter a no:"))
+s=0
+temp=num
+while temp>0:
+    c=temp%10
+    s=s+c**3
+    temp//=10
+if num==s:
+    print("Armstrong Number")
+else:
+    print("Not Armstrong Number")
+=================================================================================
+2.Factorial predefined function
+
+import math
+num=int(input("Enter a no:"))
+print(math.factorial(num))
+
+===================================================================================
+3.Fibonysis series
+num=int(input("Enter a no:"))
+a=1
+b=0
+for i in range(num):
+    c=a+b
+    a=b
+    b=c
+    print(a)
+======================================================================================
+4.Palidrome String
+def pal(num):
+    x=num[::-1]
+    if x==num:
+        print("Palindrome")
+    else:
+        print("not palindrome")
+pal('madam')
+====================================================================================
+5.Star Pattern
+num=10
+m=(2*num)-2
+for i in range(0,num):
+    for j in range(0,m):
+        print(end=' ')
+    m=m-1
+    for j in range(0,i+1):
+        print("*",end=' ')
+
+    print(" ")
+======================================================================================
+6.Reverse String 1
+
+s="Hello Mgm"
+r=s[::-1]
+print(r)
+==============================================================================
+7.Reverse String 2
+
+s="Krishna puyed BCS"
+x=s.split()
+print(x)
+a=x[::-1]
+print(a)
+d=' '.join(a)
+print(d)
+
+====================================================================================
+8.String Reverse Character
+
+s="Good Morning Everyone"
+x=s.split()
+li=[]
+
+for r in x:
+    li.append(r[::-1])
+    out=' '.join(li)
+print(out)
+=================================================================================
+10.Area Of Circle
+
+r=int(input("Enter a radius:"))
+area=3.14*r*r
+print("Area of circle=",area)
+
+=======================================================================================
+11..Write a program to addition by two number.
+a=int(input("A="))
+b=int(input("B="))
+c=a+b
+print("Add=",c)
+
+==============================================================================
+12.Write a program to if statement.
+a=int(input("Enter no:"))
+if(a>=18):
+  print("Valid for voting")
+
+===============================================================================
+
+13.String Capital
+
+s="krishna"
+print("Capatalize=",s.capatalize())
+
+=====================================================================================
+
+14.Write a program to sequence of alphabatic
+for x in 'ABCDE':
+    for y in 'ABCDE':
+        print(x,end= "  ")
+    print()
+
+=============================================================================
+
+15.Append String
+
+f1=open('student.txt','+a')
+append="Welcome to mgm college"
+
+f1.write(append)
+print(f1.read())
+f1.close()
+
+====================================================================================
+
+16.IF OR ELSE
+
+Per=int(input("Please enter 10 class percentage:"))
+Per1=int(input("Please enter 12 class percentage:"))
+Per2=int(input("Please enter graduation percentage:"))
+if Per>=60 and Per1>=60 and Per2>=60:
+   print("You are applicable for infosys registration")
+else:
+    print("Not applicable")
+
+=====================================================================================
+
+17.Write a program to calculate area of trangle.
+
+length=int(input("Enter a length:"))
+breadth=int(input("Enter a breadth:"))
+area=length*breadth
+print("Area=",area)
+
+===============================================================================
+
+18. Area Of Square
+
+side=int(input("Enter a length of side:"))
+area=side**2
+print("Area of Square=",area)
+
+=====================================================================================
+
+19.Arithmetic Operator
+
+a=int(input("Please enter a no:"))
+b=int(input("Please enter a no:"))
+c=int(input("Please enter a no:"))
+d=int(input("Please enter a no:"))
+print("Arithmatic=",a/b*c+d)
+
+====================================================================================
+
+20. Check Number is Armstrong or not
+
+num=int(input("Enter a no:"))
+arm=str(num)
+for i in num:
+    n=int(i)
+    n=n*n*n
+    arm=n
+    print("Number is armstrong")
+
+=====================================================================================
+
+21.Write a program to applicable exam form.
+
+Att=int(input("Enter a attendance:"))
+Fees=int(input("Enter a Fees:"))
+if Att>=75 and Fees==20600:
+    print("Applicable for exam form")
+else:
+    print("Not applicable for exam form")
+
+====================================================================================
+
+22.IF OR elIF
+
+unit=int(input("Enter a Unit:"))
+if unit<=100:
+   unitrate=8
+   amount=unit*unitrate
+   print("Amount=",amount)
+elif unit>100 and unit<=200:
+     unitrate=10
+     amount=unit*unitrate
+     print("Amount=",amount)
+elif unit>200:
+     unitrate=12
+     amount=unit*unitrate
+     print("Amount=",amount)
+
+================================================================================
+
+23.Calculate CGPA
+
+LR=int(input("Enter a Marks1:"))
+RDBMS=int(input("Enter a Marks1:"))
+JAVA=int(input("Enter a Marks1:"))
+SE=int(input("Enter a Marks1:"))
+CS=int(input("Enter a Marks1:"))
+total=LR+RDBMS+JAVA+SE+CS
+Percentage=total/5
+if Percentage>=80:
+   print("Total Marks=",total)
+   print("Percentage=",Percentage)
+   print("Gread=A")
+elif Percentage>=60 and Percentage<80:
+     print("Total Marks=",total)
+     print("Percentage=",Percentage)
+     print("Gread=B")
+elif Percentage>=35 and Percentage<60:
+     print("Total Marks=",total)
+     print("Percentage=",Percentage)
+     print("Gread=C")
+else:
+    print("Result=Fail")
+
+====================================================================================
+
+24.Array 1
+
+arr=["Red","Yellow","Pink","Green","Black","White"]
+for i in arr:
+     if len(i)==5:
+        print(i)
+
+==================================================================================
+
+25.Write a program to calculate cube.
+
+for i in range(1,11):
+    print(i,"=",i*i*i)
+====================================================================================
+
+26.Write a program to demonstrate convert datatype.
+a=10
+b="Welcome"
+c=20.4
+print(type(a))
+print(type(b))
+print(type(c))
+
+===================================================================================
+
+27.Default Function
+
+def fn1(a,b):
+    print("1st argument=",a)
+    print("2nd argument=",b)
+
+===================================================================================
+
+28.FOR LOOP
+a=2
+b=3
+for i in range(1,10):
+    print(a)
+    a=a+b
+
+=================================================================================
+
+29.Discount
+
+Total=int(input("Enter a amount:"))
+Discount=int(input("Enter a discount:"))
+print("Total Amount=",Total)
+print("Discount=",Discount)
+s=100-Discount
+a=s*Total/100
+print("Amount after Discount=",a)
+
+=================================================================================
+
+29.Division 3&7
+
+N=int(input("Enter a no:"))
+for i in range(1,N):
+    if i%3==0 and i%7==0:
+       print(i)
+
+====================================================================================
+
+30.IF_ELSE
+
+Email=input("Enter a Email:")
+Password=int(input("Enter a Password:"))
+if Password==567647:
+   print("Login Successful")
+else:
+    print("Incorrect Password")
+
+======================================================================================
+
+31.Print Emoj
+
+import emoji
+print(emoji.emojize('Python is :thumbs_up:'))
+
+======================================================================================
+
+32.Check Number is Even or Not
+
+num1=int(input("Enter a num1:"))
+num2=int(input("Enter a num2:"))
+if num1%2==0:
+   print("Number is even")
+print("=====================================================================")
+for i in range(1,num2+1):
+    if i%3==0:
+       print(i)
+
+====================================================================================
+
+33.Append List
+
+list=[10,20,30,40,50]
+list.append(60)
+print("Append method=",list)
+list.insert(2,100)
+print("insert method=",list)
+list.extend([70,80,90])
+print("Extends method=",list)
+print("Lenght of list=",len(list))
+print("Count number of list=",list.count(20))
+
+list.reverse()
+print("Reverse lisr=",list)
+
+====================================================================================
+
+34.Write a program to calculate factorial of given number.
+num=int(input("Enter a no:"))
+fact=1
+for i in range(1,num+1):
+    fact=fact*i
+
+print("Factorial=",fact)
+
+===================================================================================
+
+35.Fact
+
+
+import math
+num=int(input("Enter a no:"))
+print(math.factorial(num))
+if num[2]==0:
+    print("Fact is 5")
+else:
+    print("Not 5")
+
+=======================================================================================
+
+36.File Reading
+
+file=open('student.txt','+r')
+file.write("Hii")
+print(file.read())
+
+file.close()
+
+================================================================================
+
+37.List Program
+
+list=[1,2,3,4,5,6,7,8,9,10]
+for i in list:
+    print(i) 
+===================================================================================
+
+38.Write a program to demonstrate global variable.
+x=200
+def mainFunction():
+    global x
+    print(x)
+    x='Welcome MGM'
+    print(x)
+mainFunction()
+print(x)
+
+================================================================================
+
+39.Greater 3 Number
+
+num1=int(input("Enter a 1 number:"))
+num2=int(input("Enter a 2 number:"))
+num3=int(input("Enter a 3 number:"))
+
+if(num1>num2 and num1>num3):
+         print(num1,"is greater than",num2,"and",num3)
+
+elif(num2>num1 and num2>num3):
+         print(num2,"is greater than",num1,"and",num3)
+
+else:
+         print(num3,"is greater than",num1,"and",num2)
+
+========================================================================================
+
+40.Check Number is Leap Year Or Not
+
+#29.
+year=int(input("Enter a no:"))
+if year%400==0:
+   print("The Leap Year")
+elif year%100==0:
+     print("Is not Leap Year")
+elif year%4==0:
+     print("This Leap Year")
+else:
+    print("Enter Correct Year")
+
+======================================================================================
+
+41.Check Leap 2
+
+y=int(input("Enter a Year:"))
+if y%400==0:
+   print("The Year is Leap")
+elif y%100==0:
+     print("The Year is not leap")
+elif y%4==0:
+     print("The Year is Leap")
+
+======================================================================================
+
+42.Find string length
+
+str="Welcome for MGM College"
+print("Lenght of string=",str.count("MGM"))
+print(str.reverse())
+
+============================================================================
+
+43.List Count
+
+list=[10,20,30,40,50,20,25,10]
+list.reverse()
+print(list.count(10))
+print(list)
+
+====================================================================================
+
+44.IF OR ELIF 
+
+V="Vivo"
+R="Redmi"
+S="Samsung"
+Re="Realmi"
+O="Oppo"
+p=int(input("Enter a prise:"))
+if p>=8000 and p<=10000:
+   print(V)
+   print(R)
+   print(S)
+   print(Re)
+   print(O)
+Mobile=input("Enter a mobile:")
+if Mobile==V:
+   print("Ram=4gb")
+   print("Phone Storage=32gb")
+   print("Battery=5000")
+   print("Android version=11")
+   print("Model Number=Vivo 1906")
+elif Mobile==R:
+   print("Ram=4gb")
+   print("Phone Storage=64gb")
+   print("Battery=5000")
+   print("Android version=11")
+   print("Model Number=Redmi 9")
+==================================================================================
+
+45.while loop
+
+i=1
+number=0
+b=9
+number=int(input("Enter the number:"))
+while i<=10:
+   print("%d X %d = %d \n"%(number,i,number*i))
+   i=i+1
+
+=====================================================================================
+
+46.Multiplication Table
+
+def tables():
+    for x in range(1,11):
+        print("")
+        for y in range(1,11):
+            
+            print(x*y,end="  ")
+
+
+tables()
+======================================================================================
+
+47.IF OR ELSE
+
+name=input("Enter a name:")
+if len(name)==5:
+   print("Name=",name)
+else:
+    print("String character lenght is 5")
+
+====================================================================================
+
+48.Lader elif
+
+Number=int(input("Please Enter a no:"))
+if Number<=10:
+   print("This number is between 0 to 10")
+elif Number>10 and Number<=20:
+     print("This number is between 11 to 20")
+elif Number>21 and Number<=30:
+     print("This number is between 21 to 30")
+else:
+    print("The number is greater then 30")
+
+=================================================================================
+
+49.Number Sequence
+
+n=5
+k=1
+for x in range(1,n+1):
+    for y in range(1,n+1):
+        print("{:4d}".format(k),end= "")
+        k+=1
+    print()
+==================================================================================
+
+50.Write a program to odd number.
+Number=int(input("Enter a Number:"))
+N=int(input("Enter a Number:"))
+for i in range(1,10):
+    print(N)
+    N=N*Number
+======================================================================================
+
+51.Write a prime to student percentage and totalmarks.
+m1=int(input("Enter m1 Marks:"))
+m2=int(input("Enter m2 Marks:"))
+m3=int(input("Enter m3 Marks:"))
+m4=int(input("Enter m4 Marks:"))
+m5=int(input("Enter m5 Marks:"))
+
+total=m1+m2+m3+m4+m5
+percentage=total/5
+
+print("TotalMarks=",total)
+print("Percentage=",percentage)
+
+========================================================================================
+
+52.Write a program to prime number.
+c=0
+num=int(input("Enter a no:"))
+for i in range(1,num+1):
+    if num%i==0:
+       c++:
+          if c==2:
+                 print("The number is prime")
+else:
+    print("The number is not prime")
+
+===================================================================================
+
+53.Read File
+
+f2=open('student.txt','r')
+print(f2.read())
+f2.close()
+
+==================================================================================
+
+54.Reverse String
+
+Name="Maharashtra"
+print("Reverse String=",Name[ : :2])
+print("Start String=",Name[1: : ])
+print("Mid string=",Name[ :3: ]) 
+
+===================================================================================
+
+55.Reverse Word
+
+s=input("Enter a special String:")
+x=s.split()
+x1=x[::-1]
+out=' '.join(x1)
+print(out)
+
+====================================================================================
+
+56.
+
+a=b=c=100
+print("A=",a)
+print("B=",b)
+print("C=",c)
+
+=====================================================================================
+
+57.Slice Operator
+
+list=[100,200,300,400,500]
+list.pop(2)
+print("PoP Method=",list)
+print("slice Method=",list[0:4])
+list.extend([600,700,800])
+print("Exrends Method=",list)
+
+==================================================================================
+
+58.Write a program to calculate square for two numbers.
+n1=int(input("Enter 1 Number:"))
+n2=int(input("Enter 2 Number:"))
+Square1=n1*n1
+Square2=n2*n2
+print("Square1=",Square1)
+print("Square2=",Square2)
+
+========================================================================================
+
+59.Square Root
+
+import math
+a=int(input("Enter a no:"))
+print("Square=",a*a)
+print("Cube=",a*a*a)
+print("Squart root=",math.sqrt(a))
+
+====================================================================================
+
+60.Square Root 2
+
+import math
+a=int(input("Enter a no1:"))
+b=int(input("Enter a no2:"))
+c=int(input("Enter a no3:"))
+d=int(input("Enter a no4:"))
+e=int(input("Enter a no5:"))
+f=int(input("Enter a no6:"))
+g=int(input("Enter a no7:"))
+print("Square Root no1=",math.sqrt(a))
+print("Square Root no2=",math.sqrt(b))
+print("Square Root no3=",math.sqrt(c))
+print("Square Root no4=",math.sqrt(d))
+print("Square Root no5=",math.sqrt(e))
+print("Square Root no6=",math.sqrt(f))
+print("Square Root no7=",math.sqrt(g))
+
+=====================================================================================
+
+61.Write a program to print star.
+rows=int(input("Enter the rows:"))
+for i in range(0,rows+1):
+    for j in range(i):
+      print("*",end = "")
+    print() 
+
+==================================================================================
+
+62.Write a program to print star.
+
+for i in range(1,10):
+    for x in range(1,10):
+        print("*",end= " ")
+    print()
+
+==============================================================================
+
+63.FOR LOOP
+
+for i in range(1,11):     
+    for x in range(1,11):
+        print("*",end= "")
+  print()
+
+================================================================================
+
+64.Write a program to string value.
+name="Krishna Puyed"
+college="MGM College Nanded"
+class1="TY-BCS"
+batch="B"
+print("Name=",name)
+print("College=",college)
+print("Class=",class1)
+print("Batch=",batch)
+
+=======================================================================================
+
+65.SubString
+
+str=input("Please enter a string:")
+print("2nd,4th,6th,char=",str[2],str[4],str[6])
+print("1st,3rd,4th,char=",str[1],str[3],str[4])
+
+=================================================================================
+
+66.Print List Data
+
+data=[200,"ABC",20.50,10,"A"]
+print("All element=",data)
+print("2 to 5 element=",data[2:5])
+print("1 to 3 element=",data[1:3])
+
+===================================================================================
+
+67.
+
+a=int(input("Enter a no1:"))
+b=int(input("Enter a no2:"))
+print("Before swap value a and b=",a,b)
+c=b
+b=a
+a=c
+print("Value of a=",a)
+print("Value of b=",b)
+
+=====================================================================================
+
+68.Print String
+
+s="KRISHNA"
+r="Ram"
+p="AVI"
+print(s.casefold())
+print(r.casefold())
+print(p.casefold())
+
+================================================================================
+
+69.Login Student With Email
+
+Email=input("Enter a Email ID:")
+Password=input("Enter a Password:")
+if Email=="sonupuyed@gmail.com" and Password=="223344":
+   print("Welcome to Your Details:")
+   print("Name=Krishna Puyed")
+   print("Mobile No=9021833908")
+   print("Age=20")
+   print("Aadhar No=6748939489")
+else:
+    print("Invalid Email ID and Password")
+
+====================================================================================
+
+70.Calculate Subject Average
+
+n=int(input("Enter a no:"))
+list1=[]
+maximum=minimum=0
+Sum=0
+for i in range(n):
+    elem=int(input("Enter element:"))
+    if i==0:
+        maximum=minimum=elem
+        list1.append(elem)
+    if elem>maximum:
+       maximum=elem
+    if elem<minimum:
+        minimum=elem
+    Sum +=elem
+    Avg=Sum/n
+    
+    print("SUM is:",Sum)
+    print("AVERAGE is:",Avg)
+
+======================================================================================
+
+71.write a program addition by 3 number.
+def sum(x,y,z):
+    sum = x+y+z
+    if x == y == z:
+      sum = sum * 3
+    return sum
+print(sum(1,2,3))
+print(sum(5,5,5))
+
+========================================================================================
+
+72.WHILE LOOP
+
+n=int(input("Enter a number:"))
+sum=0
+while(n>0):
+     x=n%10
+     sum=sum+x
+     n=n//10
+print("Sum of=",sum)
+
+=====================================================================================
+
+73.Sum Of Array
+
+list=[10,20,30,40,50]
+for i in range(1,5):
+    sum=sum+list[i]
+    print("Sum of array=",sum)
+
+========================================================================================
+
+74.Switch Case
+
+myswitch={
+  1:"ONE",
+  2:"TWO",
+  3:"THREE"
+}
+num=int(input("Enter a any no:"))
+print('You enter:',myswitch.get(num,"invalid Number"))
+
+====================================================================================
+
+75. IF Program
+
+i=int(input("Enter a no:"))
+for x in range(1,i+1):
+    if x%2==0 and x%3==0:
+       print(x)
+s=input("Enter a name:")
+print("String index position=",s[2])
+
+====================================================================================
+
+76.While 1
+
+i=1
+while i<=10:
+      print(i)
+      i=i+1
+
+=====================================================================================
+
+77.While 2
+
+Number=int(input("Enter a no:"))
+i=1
+while i<=Number:
+      if i%4==0:
+         print(i)
+      i=i+1
+     
+======================================================================================
+
+78.Write Data in file
+
+file=open('second.txt','w')
+file.write("Welcome MGM College")
+file.write("Hello")
+file.close()
+
+===================================================================================
+
+79.Project 1
+
+import turtle
+from turtle import*
+screen = turtle.Screen()
+t = turtle.Turtle()
+speed(0)
+t.penup()
+t.goto(-400, 250)
+t.pendown() 
+t.color("orange")
+t.begin_fill()
+t.forward(800)
+t.right(90)
+t.forward(167)
+t.right(90)
+t.forward(800)
+t.end_fill()
+t.left(90)
+t.forward(167)
+t.color("green")
+t.begin_fill()
+t.forward(167)
+t.left(90)
+t.forward(800)
+t.left(90)
+t.forward(167)
+t.end_fill()
+t.penup()
+t.goto(70, 0)
+t.pendown()
+t.color("navy")
+t.begin_fill()
+t.circle(70)
+t.end_fill()
+t.penup()
+t.goto(60, 0)
+t.pendown()
+t.color("white")
+t.begin_fill()
+t.circle(60)
+t.end_fill()
+t.penup()
+t.goto(-57, -8)
+t.pendown()
+t.color("navy")
+for i in range(24):
+    t.begin_fill()
+    t.circle(3)
+    t.end_fill()
+    t.penup()
+    t.forward(15)
+    t.right(15)
+    t.pendown()
+     
+# Small Blue Circle
+t.penup()
+t.goto(20, 0)
+t.pendown()
+t.begin_fill()
+t.circle(20)
+t.end_fill()
+# Spokes
+t.penup()
+t.goto(0, 0)
+t.pendown()
+t.pensize(2)
+for i in range(24):
+    t.forward(60)
+    t.backward(60)
+    t.left(15)
+     
+#to hold the
+#output window
+turtle.done()
+
+=====================================================================================
+
+80.Project 2
+
+from turtle import *
+from random import randint
+speed(0)
+bgcolor("black")
+x = 1
+while x < 400:
+    r = randint(0,255)
+    g = randint(0,255)
+    b = randint(0,255)
+    colormode(255)
+    pencolor(r,g,b)
+    fd(50+x)
+    rt(90.911)
+x += 1
+exitonclick()
+
+======================Best Of Luck=============================================
