@@ -1195,7 +1195,7 @@ span.psw {
   z-index: 1; /* Sit on top */
   left: 0;
   top: 0;
-  width: 50%; /* Full width */
+  width: 55%; /* Full width */
   height: 90%; /* Full height */
   overflow: hidden; /* Enable scroll if needed */
   /*background-color: rgb(0,0,0); 
