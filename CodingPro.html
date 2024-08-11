@@ -1,0 +1,460 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CODING PRO- Code Editor</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+
+
+    
+
+   
+
+
+  </head>
+
+  <body onload='ready()'>
+
+   
+
+
+    <div class="flex-container">
+     
+        
+     
+      <div class="header">
+        <div class="im">
+         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWz2ust4VBOXHLo1xTHdVJdP15W6X_byx15YLUKFTYxTkCVflTVlHfjukJHvEVVHqEu_w&usqp=CAU">
+        
+        </div>
+        <a href="#default" class="logo">MGM'S COLLEGE COMPUTER SCIENCE & IT,NANDED</a>
+        
+      
+        <div class="header-right">
+        <h3>This is developed by:-</h3><br>
+        <p>Krishna Puyed</p>
+       
+        </div>
+        <d class="pro">
+          <!--
+          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"> 
+        -->
+
+        <div class="lo">
+          <button id="profile" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"> <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"> </button>
+          
+          <div id="id01" class="modal">
+            
+            <form class="modal-content animate" action="/action_page.php" method="post">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="images/kri.jpeg" alt="Login" class="avatar">
+
+
+                <div class="footer-center">
+                  <div class="pro_box">
+                    
+                 
+                  <div>
+                  
+                    <p><span><u>
+                      
+                    Krishna Puyed</u></span></p>
+                    
+                  </div>
+              <div>
+                <p>Certified Full Stack Java Developer</p>
+              </div>
+                  <div>
+                   
+                    <p> <i class="fa fa-phone"></i>&nbsp;9021833908</p>
+                  </div>
+              
+                  <div>
+                   
+                    <p> &nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;<i class="fa fa-envelope"></i><a href="mailto:support@company.com">sonupuyed@gmail.com</a></p>
+                  </div>
+              
+                </div>
+              </div>
+              </div>
+          <hr>
+              <div class="containerpro">
+            
+               <h3 style="text-align: center;margin-bottom: 20px;">**My Achievements Of Coding Pro**</h3>
+             <p>1.NARESH IT HYDERABAD ==><a href="#" id="nitcerti"><u>Show Certificate</u></a></p>
+             <p>2.AVISHKAR COMPETITION ==><a href="#" id="avicerti"><u>Show Certificate</u></a></p>
+                
+           
+          </div>
+          <hr>
+          <div class="gform">
+            <p id="fhea">Please Submit Coding Pro FeedBack Google Form</p>
+            <p id="glink">Google Form Link : <span id="gfl">https://forms.gle/DKQRaYK2HwFyu34c6</span></p>
+
+
+          </span<>
+          </div>
+          </div>
+
+
+
+
+
+
+
+
+
+        </div>
+      
+      </div>
+      <div class="flex-item-1">
+        
+        <nav class="navbar">
+
+          <ul>
+              <li class="titleNav">
+             
+                <a id="current_date" style='color:azure; font-size: 20px; font-family:Verdana, Geneva, Tahoma, sans-serif;'></a>
+           
+            
+           
+                <a id="time" style='color:azure; font-size:20px;font-family:Verdana, Geneva, Tahoma, sans-serif;'>Time</a>
+             
+            <!--  <a style='font-size:40px;'>&#128187;</a>
+             <a style='font-size:40px;'>&#128187;</a>
+             <a style='font-size:40px;'>&#10084;</a>-->  
+            
+  <!-- <a href="#" class="titleNavLink"> CODING CAMP </a>--> 
+           
+   
+
+             <!--  <a style='font-size:40px;'>&#128187;</a>
+                <a style='font-size:40px;'>&#128187;</a>--> 
+              
+              </li> 
+             
+             
+           
+          <span class="ariahidden"></span>  
+           
+  <!--       <a href="#" class="titleNavLink"> CODING CAMP </a>   -->   
+            <p class="titleNavLink">CODING PRO</p>
+      <!--      <a id="name" style='color:black; font-size:20px;'>&#128187</a>   -->
+
+           <span class="ariahidden"></span> 
+      
+          <li class="navitem optionsNav">  
+           
+              <a href="#" class="optionsNavLink">OPTIONS &#9656;</a>
+              <ul>
+                <li style="display: none;"><a href="#">Save Code Locally</a></li>
+                <li><a href="#" id="chTheme" onclick="changeTheme()">Switch Theme</a></li>
+              <li><a id="btn1">HTML</a>  
+                <li><a id="btn3">CSS</a>
+                  <li><a id="btn4">JAVASCRIPT</a>
+                    <li><a id="btn2">C_Online_Compiler</a>
+                    <li><a id="btn5">CPP_Online_Compiler</a>
+                     <li><a id="btn6">JAVA_Online_Compiler</a> 
+                      <li><a id="btnpy">PYTHON_Online_Compiler</a> 
+                      <li><a id="btn1quiz">HTML_Quiz_App</a> 
+                 <!--     <li><a id="btn8">Login</a>   -->  
+                       
+                     
+                </li>
+              </ul>
+            </li>  
+            
+          </ul>
+          
+      
+         
+        </nav>
+        
+      <div class="heading">
+<ul>
+  <div class="hea">
+        <li class="navitem active" onclick="toggle(this,0)">
+          <a href="#" class="htmlNavLink" style="font-size:23px;font-family:Verdana, Geneva, Tahoma, sans-serif;">HTML</a>
+          
+        </li>
+        <li class="navitem" onclick="toggle(this,1)">
+          <a href="#" class="cssNavLink" style="font-size:23px;font-family:Verdana, Geneva, Tahoma, sans-serif;">CSS</a>
+        </li>
+        <li class="navitem" onclick="toggle(this,2)">
+          <a href="#" class="jsNavLink" style="font-size:23px;font-family:Verdana, Geneva, Tahoma, sans-serif;">JAVASCRIPT</a>
+        </li>
+       
+      </div>
+      </ul>
+   
+    </div>
+
+      </div>
+      <div class="flex-item-2 bigscreen">
+        <div id="htmlEditor" class="editor fi-2-column-1 con">
+          
+</div>
+
+        <div id="cssEditor" class="editor fi-2-column-2 con">
+</div>
+        <div id="jsEditor" class="editor fi-2-column-3 con">
+</div>
+    
+      </div>
+    </div>
+    <div class="file">
+     <button type="button" id="download"class="button downloadCode" onclick="downloadCode()">DOWNLOAD CODE</button>
+    </div>
+<div class="out">
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#" id="btncp1">C_Programs</a>
+    <a href="#" id="btn7">C_Programs_PDF</a>
+    <a href="#" id="btn8">CPP_Programs</a>
+    <a href="#" id="btnj9">Java_Programs</a>
+    <a href="#" id="btnsql1">DBMS_Programs</a>
+    <a href="#" id="btnsql2">RDBMS_Programs</a>
+    <a href="#" id="btnand1">Android_Programs</a>
+    <a href="#" id="btnwp1">WP_Programs</a>
+    <a href="#" id="btnpy1">Python_Programs</a>
+    <a id="btn9">HTML_Programs</a><br>
+    
+
+   
+
+
+
+
+
+      
+    
+</div>
+    <!-- Use any element to open the sidenav -->
+   
+    <span onclick="openNav()"><img src="https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png" width="40px" style="padding-top: 5px; padding-left: 10px;"></span>
+   
+     
+
+
+    <ul class="multilevel-dropdown-menu">
+      <li class="parent"><a href="#">Video Lectures &#9656;</a> 
+          <ul class="child">
+              <li class="parent"><a href="#">C_Lang <span class="expand">»</span></a>
+                  <ul class="child">
+                      <li><a href="#" id="btn11c">C_Language_Hindi</a></li>
+                      <li><a href="#" id="btn12c">C_Language_English</a></li>
+                      <li><a href="#">3</a></li>
+                  </ul>
+              </li>
+              <li class="parent"><a href="#">CPP_Lang <span class="expand">»</span></a>
+                <ul class="child">
+                    <li><a href="#" id="btn13cpp">Lession_1_CPP</a></li>
+                    <li><a href="#">Lession_2</a></li>
+                    <li><a href="#">Lession_3</a></li>
+                </ul>
+            </li>
+            <li class="parent"><a href="#">Java_Lang <span class="expand">»</span></a>
+              <ul class="child">
+                  <li><a href="#" id="btn11">Lession_1</a></li>
+                  <li><a href="#">Lession_2</a></li>
+                  <li><a href="#">Lession_3</a></li>
+              </ul>
+          </li>
+          <li class="parent"><a href="#">Html <span class="expand">»</span></a>
+            <ul class="child">
+                <li><a href="#" id="btn11">Lession_1</a></li>
+                <li><a href="#">Lession_2</a></li>
+                <li><a href="#">Lession_3</a></li>
+            </ul>
+        </li>
+        <li class="parent"><a href="#">Css<span class="expand">»</span></a>
+          <ul class="child">
+              <li><a href="#" id="btn11">Lession_1</a></li>
+              <li><a href="#">Lession_2</a></li>
+              <li><a href="#">Lession_3</a></li>
+          </ul>
+      </li>
+      <li class="parent"><a href="#">JavaScript<span class="expand">»</span></a>
+        <ul class="child">
+            <li><a href="#" id="btn11">Lession_1</a></li>
+            <li><a href="#">Lession_2</a></li>
+            <li><a href="#">Lession_3</a></li>
+        </ul>
+    </li>
+          </ul>
+      </li>
+    </ul>
+
+
+
+
+  
+<div class="outdata">
+  <p>OUTPUT</p>
+</div>
+    
+
+<div class="notes">
+  <ul class="multilevel-dropdown-menu1">
+    <li class="parent1"><a href="#">Notes &#9656;</a> 
+        <ul class="child1">
+            <li class="parent1"><a href="#" id="btnhn1">HTML_CSS_NOTES</a>
+               
+            </li>
+            
+          <li class="parent1"><a href="#" id="btnjn1">JS_NOTES</a>
+            
+        </li>
+        <li class="parent1"><a href="#" id="btncn1">C_NOTES</a>
+        
+      </li>
+      <li class="parent1"><a href="#" id="btncppn1">C++_NOTES</a>
+       
+    </li>
+    <li class="parent1"><a href="#" id="btnjavan1">JAVA_NOTES</a>
+      
+  </li>
+  <li class="parent1"><a href="#"id="btnsqlnot1">SQL_NOTES</a>
+      
+  </li>
+  <li class="parent1"><a href="#"id="btnpythonn1">Python_NOTES</a>
+      
+  </li>
+
+ 
+        </ul>
+    </li>
+  </ul>
+
+</div>
+
+
+<div class="sel">
+  <select>
+    <option>*ALL HTML TAG*</option>
+    <option name="root1"id="hh1">1.<-HTML->-Root Tag<-/HTML-></option>
+    <option name="meta1"id="hh1">2.<-HEAD->-MetaData Tag<-/HEAD-></option>
+    <option name="main1"id="hh1">3.<-BODY->-Main Tag<-/BODY-></option>
+    <option name="foot1"id="hh1">4.<-FOOTER->-Footer Tag<-/FOOTER-></option>
+    <option name="HR1"id="hh1">5.<-HR->-Horizontal Line<-/HR-></option>
+    <option name="style1"id="hh1">6.<-STYLE>-For CSS CODE<-/STYLE-></option>
+      <option name="BR1"id="hh1">7.<-BR->-Break the line<-/BR-></option>
+
+
+
+    <option name="sup1"id="hh1">8.<-SUP->-Super Script Tag<-/SUP-></option>
+    <option name="sub1"id="hh1">9.<-SUB->-Sub Script Tag<-/SUB-></option>
+    <option name="mar1"id="hh1">10.<-MARQUEE->-Marquee Tag<-/MARQUEE-></option>
+    <option name="pre1"id="hh1">11.<-PRE->-Pre-Formating Tag<-/PRE-></option>
+    <option name="DIV1"id="hh1">12.<-DIV->-Divided Pages<-/DIV-></option>
+    <option name="SPAN1"id="hh1">13.<-SPAN-Divided Large pages into small section<-/SPAN-></option>
+    <option name="Add1"id="hh1">14.<-ADDRESS->-Address Tag<-/ADDRESS-></option>
+    <option name="fon1"id="hh1">15.<-Font->-Font Tag<-/FONT-></option>
+    <option name="img1"id="hh1">16.<-IMG SRC="path"->-Image Tag<-/IMG-></option>
+    <option name="A1"id="hh1">17.<-A->-Anchor Tag<-/A-></option>
+    <option name="TAB1"id="hh1">18.<-TABLE->- Table Tag<-/TABLE-></option>
+    <option name="TAB2" id="hh1">19.<-TR->- Table Row Tag<-/TR-></option>
+    <option name="TAB3"id="hh1">20.<-TH->- Table Heading Tag<-/TH-></option>
+    <option name="TAB4"id="hh1">21.<-TD->- Table Data Tag<-/TD-></option>
+    <option name="CAP1"id="hh1">22.<-CAPTION->- Caption Tag<-/CAPTION-></option>
+    <option name="FRA1"id="hh1">23.<-FRAMESET ROW="Values"->- Divided Frame Row Format<-/FRAESET-></option>
+    <option name="FRA2"id="hh1">24.<-FRAMESET COLS="Values"->- Divided Frame Coloum Format<-/FRAMESET-></option>
+    <option name="FRA"id="hh1">25.<-FRAMES SRC="Img Path"->- Add Frame in Divided Block<-/FRAMES-></option>
+    <option name="FOR1"id="hh1">26.<-FORM->-Collect input data and store Systemetic way<-/FORM-></option>
+    <option name="TAREA"id="hh1">27.<-TEXTAREA>-Multiple Line Text<-/TEXTAREA-></option>
+<option name="U1"id="hh1">28.<-U->-Underline Text<-/U-></option>
+    <option name="I1"id="hh1">29.<-I->-Italic Text<-/I-></option>
+    <option name="P1"id="hh1">30.<-P->-Paragraph Tag<-/P-></option>
+  
+  
+  </select>
+</div>
+
+
+
+
+
+
+
+
+
+   
+</div>
+<div class="tt">
+
+    <iframe id="ifrResult" class="output" >
+     
+
+    </iframe>
+</div>
+<!--
+<footer>
+
+ <div class="mar">
+  <marquee behavior="scroll" direction="right">
+    Thanks For Using
+  </marquee>
+ </div>
+
+</footer>
+-->
+<footer class="footer">
+  <div class="waves">
+    <div class="wave" id="wave1"></div>
+    <div class="wave" id="wave2"></div>
+    <div class="wave" id="wave3"></div>
+    <div class="wave" id="wave4"></div>
+  </div>
+  <ul class="social-icon">
+    <li class="social-icon__item"><a class="social-icon__link" href="#">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </a></li>
+    <li class="social-icon__item"><a class="social-icon__link" href="#">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </a></li>
+    <li class="social-icon__item"><a class="social-icon__link" href="#">
+        <ion-icon name="logo-linkedin"></ion-icon>
+      </a></li>
+    <li class="social-icon__item"><a class="social-icon__link" href="#">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </a></li>
+  </ul>
+  <ul class="menu">
+    <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+    <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+    <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+    <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+    <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+
+  </ul>
+  <p>MGM'S COLLEGE COMPUTER SCIENCE ANT IT, NANDED</p>
+</footer>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+	<script type="text/javascript" src="./main.js"></script>
+	<script type="text/javascript" src="./ace/ace.js"></script>
+	<script type="text/javascript" src="./ace/mode-css.js"></script>
+	<script type="text/javascript" src="./ace/mode-javascript.js"></script>
+	<script type="text/javascript" src="./ace/mode-html.js"></script>
+	<script type="text/javascript" src="./ace/worker-css.js"></script>
+	<script type="text/javascript" src="./ace/worker-javascript.js"></script>
+	<script type="text/javascript" src="./ace/worker-html.js"></script>
+	<script type="text/javascript" src="./ace/theme-crimson_editor.js"></script>
+	<script type="text/javascript" src="./ace/theme-monokai.js"></script>
+
+
+
+<script>
+    $(function() {
+    $( "#htmlEditor").resizable();
+    });
+</script>
+  </body>
+</html>
