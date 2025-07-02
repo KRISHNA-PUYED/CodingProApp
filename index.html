@@ -1,600 +1,261 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
- <title>Document</title>
+  <meta charset="UTF-8">
+  <title>CODING PRO - MGM's College</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 
- 
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
- <style>
+    body {
+      overflow-x: hidden;
+    }
 
-    *
-      {
-          padding: 0;
-          margin: 0;
-          box-sizing: border-box;
+    .container1 {
+      height: 100vh;
+      width: 100%;
+      background-image: url("Images/img1.jpg");
+      background-size: cover;
+      background-position: center;
+      animation: bgAnim 20s infinite linear;
+      position: relative;
+    }
 
+    @keyframes bgAnim {
+      0% { background-image: url("Images/img1.jpg"); }
+      25% { background-image: url("Images/img2.jpg"); }
+      50% { background-image: url("Images/img3.jpg"); }
+      75% { background-image: url("Images/img4.jpg"); }
+      100% { background-image: url("Images/img1.jpg"); }
+    }
+
+    .container1::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 0;
+    }
+
+    .hea {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      text-align: center;
+      z-index: 1;
+    }
+
+    .hea h1 {
+      font-size: 2.8rem;
+      text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
+      font-weight: bold;
+    }
+
+    .hea h2 {
+      margin-top: 10px;
+      font-size: 1.8rem;
+      color: #00b4d8;
+    }
+
+    .lo {
+      margin-top: 40px;
+    }
+
+    .lo button {
+      padding: 12px 25px;
+      font-size: 20px;
+      background-color: #ff5722;
+      border: none;
+      border-radius: 25px;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .lo button:hover {
+      background-color: #e91e63;
+      transform: scale(1.05);
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      padding-top: 80px;
+    }
+
+    .modal-content {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      margin: auto;
+      padding: 40px;
+      width: 90%;
+      max-width: 400px;
+      position: relative;
+      box-shadow: 0 0 20px rgba(255,255,255,0.3);
+      animation: animatezoom 0.6s;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .modal-content input[type="text"],
+    .modal-content input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      border: none;
+      font-size: 16px;
+    }
+
+    .modal-content input[type="button"] {
+      background-color: #00b4d8;
+      color: white;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .modal-content input[type="button"]:hover {
+      background-color: #0077b6;
+    }
+
+    @keyframes animatezoom {
+      from { transform: scale(0) }
+      to { transform: scale(1) }
+    }
+
+    footer.footer-distributed {
+      background: #111;
+      color: white;
+      padding: 50px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .footer-distributed div {
+      flex: 1 1 300px;
+      margin: 10px;
+    }
+
+    .footer-distributed h3 {
+      font-size: 24px;
+      color: #00b4d8;
+    }
+
+    .footer-icons a {
+      color: white;
+      margin-right: 10px;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    .footer-company-about {
+      margin-top: 15px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .hea h1 {
+        font-size: 2rem;
       }
-      .container1
-      {
-        height:500px;
-        width:100%;
-        background-image: url("Images/cs1.jpg");
-        background-position: center center;
-     position: relative;
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        animation-name: myani;
-        animation-duration: 5s;
-        animation-timing-function: linear;animation-iteration-count: infinite;
+      .hea h2 {
+        font-size: 1.2rem;
       }
-
-      @keyframes myani{
-     0%{background-image: url("Images/img1.jpg");}
-     25%{background-image: url("Images/img2.jpg");}
-     50%{background-image: url("Images/img3.jpg");}
-     75%{background-image: url("Images/img4.jpg");}
-      }
-
-.container1::after
-{
-content:'';
-position:absolute;
-width:100%;
-height:100%;
-top:0;
-background-color:rgb(0,0,0,0.55);
-}
-
-
-
-      form
-{
-width:30%;
-height:450px;
-
-
-}
-
-/* Full-width input fields */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 1px 10;
-margin-bottom:20px;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-border-radius:15px;
-}
-
-/* Set a style for all buttons */
-button {
- background-color: tomato;
-  color: white;
-  padding: 2PX 25px;
-  margin-top:30px;
-margin-bottom:10px;
-  border: none;
-font-size:27px;
-  cursor: pointer;
-  width: 100%;
-height:40px;
-border-radius: 15PX;
-}
-
-#b1
-{
-width:100%;
-height:40px;
-margin-top:15px;
-cursor:pointer;
-font-size:25px;
-}
-
-
-
-button:hover {
-  opacity: 0.8;
-text-decoration: underline;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
-/* Center the image and position the close button */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-  position: relative;
-}
-
-img.avatar {
-  width: 20%;
-  border-radius: 50%;
-}
-
-.container {
-  padding: 16px;
-}
-
-
-
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 50%; /* Full width */
-  height: 90%; /* Full height */
-  overflow: hidden; /* Enable scroll if needed */
-  /*background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4);*/ /* Black w/ opacity */
-  padding-top: 20px;
-margin-left:25%;
-
-
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color:gray;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
-
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button (x) */
-.close {
-  position: absolute;
-  right: 25px;
-  top: 0;
-  color: #000;
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: red;
-  cursor: pointer;
-}
-
-/* Add Zoom Animation */
-.animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)} 
-  to {-webkit-transform: scale(1)}
-}
-  
-@keyframes animatezoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     width: 100%;
-  }
-}
-
-
- .lo
-{
- 
-   
-}
-.hea
-{
-
- position: absolute;
- top: 20%;
- 
- color: white;
- padding: 20px;
- width: 100%;
- text-align: center;
-
-
-   
-}
-.hea h1{
-   color: #eaeaea;
-   font-weight: 200;
-   font-size: 40px;
-  text-shadow: 2px 3px 4px 6px;
- 
-   font-family: "Lucida Handwriting", cursive;
-}
-.hea h2{
-margin-top: 20px;
-font-size: 30px;
-color:#0077b6;
-}
-
-
-
-
-
-
-.footer-distributed{
-  background: black;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  width: 100%;
-  text-align: left;
-  font: bold 16px sans-serif;
-  padding: 55px 50px;
-}
-
-.footer-distributed .footer-left,
-.footer-distributed .footer-center,
-.footer-distributed .footer-right{
-  display: inline-block;
-  vertical-align: top;
-}
-
-/* Footer left */
-
-.footer-distributed .footer-left{
-  width: 40%;
-}
-
-/* The company logo */
-
-.footer-distributed h3{
-  color:  #ffffff;
-  font: normal 36px 'Open Sans', cursive;
-  margin: 0;
-}
-
-.footer-distributed h3 span{
-  color:  lightseagreen;
-}
-
-/* Footer links */
-
-.footer-distributed .footer-links{
-  color:  #ffffff;
-  margin: 20px 0 12px;
-  padding: 0;
-}
-
-.footer-distributed .footer-links a{
-  display:inline-block;
-  line-height: 1.8;
-  font-weight:400;
-  text-decoration: none;
-  color:  inherit;
-}
-
-.footer-distributed .footer-company-name{
-  color:  #222;
-  font-size: 14px;
-  font-weight: normal;
-  margin: 0;
-}
-
-/* Footer Center */
-
-.footer-distributed .footer-center{
-  width: 35%;
-}
-
-.footer-distributed .footer-center i{
-  background-color:  #33383b;
-  color: #ffffff;
-  font-size: 25px;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 42px;
-  margin: 10px 15px;
-  vertical-align: middle;
-}
-
-.footer-distributed .footer-center i.fa-envelope{
-  font-size: 17px;
-  line-height: 38px;
-}
-
-.footer-distributed .footer-center p{
-  display: inline-block;
-  color: #ffffff;
-  font-weight:400;
-  vertical-align: middle;
-  margin:0;
-}
-
-.footer-distributed .footer-center p span{
-  display:block;
-  font-weight: normal;
-  font-size:14px;
-  line-height:2;
-}
-
-.footer-distributed .footer-center p a{
-  color:  lightseagreen;
-  text-decoration: none;;
-}
-
-.footer-distributed .footer-links a:before {
-  content: "|";
-  font-weight:300;
-  font-size: 20px;
-  left: 0;
-  color: #fff;
-  display: inline-block;
-  padding-right: 5px;
-}
-
-.footer-distributed .footer-links .link-1:before {
-  content: none;
-}
-
-/* Footer Right */
-
-.footer-distributed .footer-right{
-  width: 20%;
-}
-
-.footer-distributed .footer-company-about{
-  line-height: 20px;
-  color:  #92999f;
-  font-size: 13px;
-  font-weight: normal;
-  margin: 0;
-}
-
-.footer-distributed .footer-company-about span{
-  display: block;
-  color:  #ffffff;
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.footer-distributed .footer-icons{
-  margin-top: 25px;
-}
-
-.footer-distributed .footer-icons a{
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-  background-color:  #33383b;
-  border-radius: 2px;
-
-  font-size: 20px;
-  color: #ffffff;
-  text-align: center;
-  line-height: 35px;
-
-  margin-right: 3px;
-  margin-bottom: 5px;
-}
-
-/* If you don't want the footer to be responsive, remove these media queries */
-
-@media (max-width: 880px) {
-
-  .footer-distributed{
-    font: bold 14px sans-serif;
-  }
-
-  .footer-distributed .footer-left,
-  .footer-distributed .footer-center,
-  .footer-distributed .footer-right{
-    display: block;
-    width: 100%;
-    margin-bottom: 40px;
-    text-align: center;
-  }
-
-  .footer-distributed .footer-center i{
-    margin-left: 0;
-  }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }
   </style>
 </head>
 <body>
-    <div class="container1">
-       
 
-        
+  <div class="container1"></div>
 
-
-
-           
-
-
-
-
-
+  <div class="hea">
+    <h1>MGM'S COLLEGE COMPUTER SCIENCE & IT NANDED</h1>
+    <h2>CODING PRO</h2>
+    <div class="lo">
+      <button onclick="document.getElementById('id01').style.display='block'">Login</button>
     </div>
-    
-    <div class="hea">
-        <h1>MGM'S COLLEGE COMPUTER SCIENCE & IT NANDED</h1>
-          <h2>CODING PRO</h2>
+  </div>
 
+  <!-- Modal -->
+  <div id="id01" class="modal">
+    <form class="modal-content animate" method="post">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close">&times;</span>
+      <div style="text-align:center;">
+        <img src="images/icon.png" alt="Avatar" style="width:80px; border-radius:50%;">
+      </div>
+      <input type="text" placeholder="Enter Username" id="username" required>
+      <input type="password" placeholder="Enter Password" id="password" required>
+      <input type="button" value="Login" onClick="show()">
+    </form>
+  </div>
 
-
-        <div class="lo">
-            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-            
-            <div id="id01" class="modal">
-              
-              <form class="modal-content animate" action="/action_page.php" method="post">
-                <div class="imgcontainer">
-                  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                  <img src="images/icon.png" alt="Login" class="avatar">
-                </div>
-            
-                <div class="container">
-                
-                  <input type="text" placeholder="Enter Username" name="uname" id="username" required>
-            
-                
-                  <input type="password" placeholder="Enter Password" name="psw" id="password" required>
-                    
-                  <input type="button" name="btn" id="b1" value="Login" onClick="show()">
-                  
-              </form>
-            </div>
-            </div>
-            </div>
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <footer class="footer-distributed">
+    <div class="footer-left">
+      <h3>College <span>Logo</span></h3>
+      <div class="footer-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+      </div>
     </div>
 
+    <div class="footer-center">
+      <p><strong>Krishna Puyed</strong> <br>Certified Full Stack Java Developer</p>
+      <p><i class="fa fa-phone"></i> 9021833908</p>
+      <p><i class="fa fa-envelope"></i> <a href="mailto:sonupuyed@gmail.com">sonupuyed@gmail.com</a></p>
+    </div>
 
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>About the Coding Pro</span>
+        This project is very useful for beginners to practice HTML, CSS, and JavaScript. Its goal is to simplify web development for students. THANK YOU!
+      </p>
+      <h4 style="color:#00b4d8;">Thank You...</h4>
+    </div>
+  </footer>
 
-
-<footer class="footer-distributed">
-
-      <div class="footer-left">
-
-        <h3>College<span>logo</span></h3>
-
-        <p class="footer-links">
-           <div class="footer-icons">
-
-          <a href="#"><i class="fa fa-facebook"></i></a>
-          <a href="#"><i class="fa fa-twitter"></i></a>
-          <a href="#"><i class="fa fa-linkedin"></i></a>
-          <a href="#"><i class="fa fa-github"></i></a>
-
-        </div>
-        </p>
-
-        <p class="footer-company-name"></p>
-      </div>
-
-      <div class="footer-center">
-
-        <div>
-          <i class="fa fa-map-marker"></i>
-          <p><span>Krishna Puyed</span>Certified Full Stack Java Developer</p>
-        </div>
-
-        <div>
-          <i class="fa fa-phone"></i>
-          <p>9021833908</p>
-        </div>
-
-        <div>
-          <i class="fa fa-envelope"></i>
-          <p><a href="mailto:support@company.com">sonupuyed@gmail.com</a></p>
-        </div>
-
-      </div>
-
-      <div class="footer-right">
-
-        <p class="footer-company-about">
-          <span>About the Coding Pro</span>
-       
-            This Project is Very useful for new learnear or beginner to execute HTML,CSS AND JAVASCRIPT code, The main purpose of this project is to avoid the burdon of student or new user while executing WEB DEVELOPMENT PROGRAMS.<br>THANK YOU!!...
-        
-        </p>
-        <h1>Thank You.....</h1>
-       
-
-      </div>
-
-    </footer>
-
-
-
-
-
-
-
-   
-
-      <script type="text/javascript">
-
-
-
-        function show()
-        {
-        var uid=document.getElementById('username').value;
-        var upass=document.getElementById('password').value;
-        if(uid=="student" && upass=="mgm")
-        {
+  <script>
+    function show() {
+      const uid = document.getElementById('username').value;
+      const upass = document.getElementById('password').value;
+      if (uid === "student" && upass === "mgm") {
         location.assign("CodingPro.html");
-        }
-        else
-        {
-        window.	alert("Invalid UserName and Password");
-        
-        }
-        
-        
-        }
-        </script>
-
-
-
+      } else {
+        alert("Invalid UserName and Password");
+      }
+    }
+  </script>
 
 </body>
 </html>
