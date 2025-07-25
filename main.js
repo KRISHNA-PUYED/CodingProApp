@@ -371,7 +371,7 @@ ifrResult.src="Images/Avishkar.png"
 }
 function Open_Form()
 {
-ifrResult.src="https://forms.gle/DKQRaYK2HwFyu34c6"
+ifrResult.src="https://forms.gle/fn7TMqUKgVB24bKQA"
 }
 
 
